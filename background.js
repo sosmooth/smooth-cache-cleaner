@@ -1,8 +1,13 @@
-function hello(){
-	alert('hello josh');
-}
-
 chrome.browserAction.onClicked.addListener(function(tab){
-	hello();
+	var tab_url = tab.url ;
+	/*
+		Check if current tab  url is among specified url
+		...
+	*/ 
+	
+	// chrome.browsingData.removeCache(, function(){
+
+	// });
+
 })
 
