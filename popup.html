@@ -2,18 +2,25 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Cache Cleaner</title>
-	</head>
+		<!-- CSS -->
+		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+		<!-- JS -->
+		<script src="static/js/jquery.min.js"></script>
+		<script src="static/js/bootstrap.min.js"></script>
+	</head>		
 	<body>
-		<form id="form">
-			<label for="Clear">Clear since</label>
-			<select name="since">
-				<option value="a_hour">A Hour</option>
-				<option value="a_day">A Day</option>
-				<option value="a_week">A Week</option>
-				<option value="a_month">A Month</option>
-				<option value="ever">Ever</option>
-			</select>
-		<input id="submit" type="submit" name="submit" value="Clear">
-		</form>
+		<div class="container">
+			<form id="form">
+				<label for="Clear">Clear since</label>
+				<select  class="selectpicker" id="since" name="since" class="form-control">
+					<option value="hour">A Hour</option>
+					<option value="day">A Day</option>
+					<option value="week">A Week</option>
+					<option value="month">A Month</option>
+					<option value="ever">Ever</option>
+				</select>
+				<input class="btn btn-primary" id="submit" type="submit" name="submit" value="Clear">
+			</form>
+		</div>
 	</body>
 </html>
