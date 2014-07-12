@@ -39,6 +39,5 @@ function clearCache(p){
 	 elapsed_time = period[p] ;
 
 	 // Cleaning the cache
-	 // chrome.browsingData.removeCache(elapsed_time, notify);
-	 alert("Cache successfully cleared");
+	 chrome.browsingData.removeCache(elapsed_time, notify);
 }
