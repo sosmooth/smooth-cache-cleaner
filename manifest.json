@@ -1,20 +1,24 @@
 {
+	"author": "Josue Kouka",
 	"manifest_version": 2,
 	"name": "Cache Cleaner",
-	"version": "0.1",
+	"version": "0.4",
 
 	"browser_action": {
 		"default_title": "test",
 		"default_popup": "popup.html",
 		"default_icon": "static/img/icon.png"
 	},
-
+	// Logic lies in that file
 	"background": {
-		"scripts": ["background.js"]
+		"scripts": ["background.js"],
+		"persistant": false
 	},
 	// Permissions
 	"permissions": [
 		"tabs",
 		"browsingData"
-	]	
+	],
+
+	"offline_enabled": true
 }
