@@ -1,7 +1,7 @@
 /*
 	Cleaning notification
 */ 
-function notify(){
+var callback = function notify(){
 	alert("Cache successfully cleared");
 }
 
@@ -36,8 +36,20 @@ function getPeriod(period){
 */ 
 function clearCache(p){
 	 
-	 elapsed_time = period[p] ;
+ 	elapsed_time = period[p] ;
 
-	 // Cleaning the cache
-	 chrome.browsingData.removeCache(elapsed_time, notify);
+ 	// Cleaning the cache
+ 	var cache_null = chrome.browsingData.removeCache(
+ 		{"since": elapsed_time}, 
+ 		callback
+ 	);
+ 	console.log(cache_null);
+
+ 	/*Message sender*/
+ 	// send <removeCache> return value to popup.js
+ 	chrome.extension.sendMessage(
+ 		{response: cache_null},
+ 		function(response){	
+ 			console.log(response);
+ 	}) 
 }
