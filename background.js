@@ -4,10 +4,10 @@ chrome.browserAction.onClicked.addListener(function(tab){
 		Check if current tab  url is among specified url
 		...
 	*/ 
-	
-	// chrome.browsingData.removeCache(, function(){
 
-	// });
+	var millisecondPerWeek = 1000 * 60 * 60 * 24 * 7 ;
+	var oneWeekAgo = (new Date()).getTime() - millisecondPerWeek;
 
+	// chrome.browsingData.removeCache({}, callback);
 })
 

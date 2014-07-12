@@ -1,9 +1,19 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>Cache Cleaner</title>
 	</head>
 	<body>
-		<p>Test</p>
+		<form id="form">
+			<label for="Clear">Clear since</label>
+			<select name="since">
+				<option value="a_hour">A Hour</option>
+				<option value="a_day">A Day</option>
+				<option value="a_week">A Week</option>
+				<option value="a_month">A Month</option>
+				<option value="ever">Ever</option>
+			</select>
+		<input id="submit" type="submit" name="submit" value="Clear">
+		</form>
 	</body>
 </html>
