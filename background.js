@@ -1,31 +1,44 @@
-function cleanCache(tab){
-	$('document').ready(function(tab){
-	var tab_url = tab.url ;
-	/*
-		Check if current tab  url is among specified url
-		...
-	*/ 
-	alert('hello joe');
-	var millisecondPerWeek = 1000 * 60 * 60 * 24 * 7 ;
-	var oneWeekAgo = (new Date()).getTime() - millisecondPerWeek;
-
-	$('#submit').click(function(){
-		console.log('con japhet');
-		alert('con');
-	});
-
-	var val = $('#since').val();
-	console.log('con japhet');
-	alert('con');
-	// chrome.browsingData.removeCache({}, callback);
-	})
+/*
+	Cleaning notification
+*/ 
+function notify(){
+	alert("Cache successfully cleared");
 }
 
-chrome.browserAction.onClicked.addListener(function(tab){
-	alert('josh');
-	// $('#since').change(function(){
-	// 	var val = $('#since').val();
-	// 	alert(val);
-	// })
-});
+/*
+	Array of period in millisecond
+*/ 
+var millisecondPer = {
+	'hour': 1000 * 60 * 60, 
+	'day': 1000 * 60 * 60 * 24,
+	'week': 1000 * 60 * 60 * 24 * 7
+}
 
+/*
+	Array of period
+*/ 
+var period = {
+	'hour': getPeriod(millisecondPer['hour']),
+	'day': getPeriod(millisecondPer['day']),
+	'week': getPeriod(millisecondPer['week']),
+	'ever': 0,
+}
+
+/*
+	Return lapse time from now according 
+*/ 
+function getPeriod(period){
+	return (new Date()).getTime() - period; 
+}
+
+/*
+	Clear the cache according to the specified period
+*/ 
+function clearCache(p){
+	 
+	 elapsed_time = period[p] ;
+
+	 // Cleaning the cache
+	 // chrome.browsingData.removeCache(elapsed_time, notify);
+	 alert("Cache successfully cleared");
+}

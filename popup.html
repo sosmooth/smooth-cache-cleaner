@@ -3,24 +3,27 @@
 		<meta charset="utf-8">
 		<title>Cache Cleaner</title>
 		<!-- CSS -->
+		<style type="text/css" media="screen">
+			
+		</style>
 		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
 		<!-- JS -->
 		<script src="static/js/jquery.min.js"></script>
 		<script src="static/js/bootstrap.min.js"></script>
+		<script src="popup.js"></script>
 	</head>		
 	<body>
-		<div class="container">
-			<form id="form">
+		<div class="container span4">
 				<label for="Clear">Clear since</label>
-				<select  class="selectpicker" id="since" name="since" class="form-control">
+				<select  id="since" name="since">
 					<option value="hour">A Hour</option>
 					<option value="day">A Day</option>
 					<option value="week">A Week</option>
 					<option value="month">A Month</option>
 					<option value="ever">Ever</option>
 				</select>
-				<input class="btn btn-primary" id="submit" type="submit" name="submit" value="Clear">
-			</form>
+				<br/>
+				<button class="btn btn-danger btn-xs" id="submit" type="button">Clear Cache</button>
 		</div>
 	</body>
 </html>
