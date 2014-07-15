@@ -1,15 +1,21 @@
 {
 	"author": "Josue Kouka",
 	"manifest_version": 2,
-	"name": "Cache Cleaner",
+	"name": "Smart Cache Cleaner",
+	"short_name": "Smart Cache Cleaner",
 	"description": "Small extension that cleans your cache a : - hour - day - week from now.",
 	"version": "1.0",
-
+	"icons": {
+		"16": "static/img/icon.png",
+		"48": "static/img/icon48.png",
+		"128": "static/img/icon128.png"
+	},
 	"browser_action": {
 		"default_title": "Cache Cleaner",
 		"default_popup": "popup.html",
 		"default_icon": "static/img/icon.png"
 	},
+
 	"background": {
 		"scripts": ["background.js"],
 		"persistant": false
