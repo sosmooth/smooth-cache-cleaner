@@ -1,4 +1,4 @@
-$('documdnt').ready(function(){
+$('document').ready(function(){
 	$('#submit').click(function(){
 		var val = $('#since').val();
 		// The function below call the function <clearCache>

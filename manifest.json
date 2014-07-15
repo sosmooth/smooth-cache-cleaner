@@ -2,26 +2,18 @@
 	"author": "Josue Kouka",
 	"manifest_version": 2,
 	"name": "Cache Cleaner",
-	"description": "
-		Small extension that cleans your cache a :
-		- hour
-		- day
-		- week
-		from now. 
-	",
-	"version": "0.8",
+	"description": "Small extension that cleans your cache a : - hour - day - week from now.",
+	"version": "1.0",
 
 	"browser_action": {
 		"default_title": "Cache Cleaner",
 		"default_popup": "popup.html",
 		"default_icon": "static/img/icon.png"
 	},
-	// Logic lies in that file
 	"background": {
 		"scripts": ["background.js"],
 		"persistant": false
 	},
-	// Permissions
 	"permissions": [
 		"tabs",
 		"browsingData"
