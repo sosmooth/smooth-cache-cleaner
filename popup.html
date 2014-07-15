@@ -2,10 +2,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Cache Cleaner</title>
-		<!-- CSS -->
-		<style type="text/css" media="screen">
-			
-		</style>
+		<!--	 CSS -->
+		<link rel="stylesheet" href="static/css/style.css">
 		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
 		<!-- JS -->
 		<script src="static/js/jquery.min.js"></script>
@@ -14,7 +12,8 @@
 	</head>		
 	<body>
 		<div class="container span4">
-				<label for="Clear">Clear since</label>
+			<form class="text-center">
+				<label class="top-buffer" for="Clear">Clear since</label>
 				<select  id="since" name="since">
 					<option value="ten_minutes">The last 10 mins</option>
 					<option value="half_hour">A half Hour</option>
@@ -25,7 +24,8 @@
 					<option value="ever">Ever</option>
 				</select>
 				<br/>
-				<button class="btn btn-danger btn-xs" id="submit" type="button">Clear Cache</button>
+				<button class="btn btn-danger btn-xs center-block top-buffer" id="submit" type="button">Clear Cache</button>
+			</form>
 		</div>
 	</body>
 </html>
