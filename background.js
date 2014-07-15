@@ -9,19 +9,24 @@ var callback = function notify(){
 	Array of period in millisecond
 */ 
 var millisecondPer = {
+	'ten_minutes': 100 * 60 * 10,
+	'half_hour': 1000 * 60 * 30,
 	'hour': 1000 * 60 * 60, 
 	'day': 1000 * 60 * 60 * 24,
-	'week': 1000 * 60 * 60 * 24 * 7
+	'week': 1000 * 60 * 60 * 24 * 7,
+	'ever': 0
 }
 
 /*
 	Array of period
 */ 
 var period = {
+	'ten_minutes': getPeriod(millisecondPer['ten_minutes']),
+	'half_hour': getPeriod(millisecondPer['half_hour']),
 	'hour': getPeriod(millisecondPer['hour']),
 	'day': getPeriod(millisecondPer['day']),
 	'week': getPeriod(millisecondPer['week']),
-	'ever': 0,
+	'ever': getPeriod(millisecondPer['ever'])
 }
 
 /*
