@@ -44,16 +44,15 @@ function clearCache(p){
  	elapsed_time = period[p] ;
 
  	// Cleaning the cache
- 	var cache_null = chrome.browsingData.removeCache(
+ 	chrome.browsingData.removeCache(
  		{"since": elapsed_time}, 
  		callback
  	);
- 	console.log(cache_null);
 
  	/*Message sender*/
  	// send <removeCache> return value to popup.js
  	chrome.extension.sendMessage(
- 		{response: cache_null},
+ 		{response: {'cache_clean': true}},
  		function(response){	
  			console.log(response);
  	}) 

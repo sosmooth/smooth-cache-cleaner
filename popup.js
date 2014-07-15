@@ -11,7 +11,9 @@ $('document').ready(function(){
 			function(request, sender, sendResponse){
 				if (request.response){
 					response = request.response;
-					console.log(response)
+					console.log(request, sender);
+					//Sending a response back
+					sendResponse({success: 200}); 
 				}
 		}) 
 	});
