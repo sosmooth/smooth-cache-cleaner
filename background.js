@@ -1,3 +1,8 @@
+/*test function*/
+function hello(){
+	return "hello ^_^" ;
+} 
+
 /*
 	Cleaning notification
 */ 

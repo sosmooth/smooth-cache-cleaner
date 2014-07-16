@@ -5,7 +5,7 @@
 	"name": "__MSG_appName__",
 	"description": "__MSG_appDesc__",
 	"short_name": "Smart Cache Cleaner",
-	"version": "1.5",
+	"version": "1.5.1",
 	"homepage_url": "https://chrome.google.com/webstore/detail/smart-cache-cleaner/mjdjfdpghmnnjmlnoagnlbbmcljcmpkc",
 	"icons": {
 		"16": "static/img/icon.png",
@@ -24,7 +24,8 @@
 	"options_page": "options.html",
 	"permissions": [
 		"tabs",
-		"browsingData"
+		"browsingData",
+		"storage"
 	],
 	"offline_enabled": true
 }
