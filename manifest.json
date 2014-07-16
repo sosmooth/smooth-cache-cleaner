@@ -17,11 +17,11 @@
 		"default_popup": "popup.html",
 		"default_icon": "static/img/icon.png"
 	},
-
 	"background": {
 		"scripts": ["background.js"],
 		"persistant": false
 	},
+	"options_page": "options.html",
 	"permissions": [
 		"tabs",
 		"browsingData"
