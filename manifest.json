@@ -4,9 +4,7 @@
 	"default_locale": "fr",
 	"name": "__MSG_appName__",
 	"description": "__MSG_appDesc__",
-	// "name": "Smart Cache Cleaner",
 	"short_name": "Smart Cache Cleaner",
-	// "description": "Small extension that cleans your cache a : half hour- hour - day - week from now.",
 	"version": "1.4",
 	"homepage_url": "https://chrome.google.com/webstore/detail/smart-cache-cleaner/mjdjfdpghmnnjmlnoagnlbbmcljcmpkc",
 	"icons": {
