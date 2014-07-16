@@ -1,0 +1,10 @@
+{
+	"appName":{
+		"message": "Smart Cache Cleaner",
+		"description": "We don't translate titles"
+	},
+	"appDesc":{
+		"message": "Small extension that cleans your cache a : half hour- hour - day - week from now.",
+		"description": "description of the extension displayed in the webstore"
+	}
+}
