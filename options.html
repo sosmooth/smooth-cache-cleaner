@@ -2,8 +2,27 @@
 <html>
 <head>
 	<title>Option Page</title>
+	<!--	 CSS -->
+	<link rel="stylesheet" href="static/css/style.css">
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+	<!-- JS -->
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<script src="options.js"></script>
 </head>
 <body>	
-	This is an option page 
+	<div class="container">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" name="cache" value="cache"> Cache
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" name="appcache" value="appcache"> AppCache
+			</label>
+		</div>
+		<button class="btn btn-danger btn-xs center-block top-buffer" id="submit" type="button">Save</button>
+	</div>
 </body>
 </html>
