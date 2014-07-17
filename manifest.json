@@ -21,7 +21,7 @@
 		"scripts": ["background.js"],
 		"persistant": false
 	},
-	"options_page": "options.html",
+	// "options_page": "options.html",
 	"permissions": [
 		"tabs",
 		"browsingData",
