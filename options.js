@@ -1,16 +1,18 @@
 $('document').ready(function(){
 	var options = {};
-	
+	getUserPreferences(options);
 	$('#submit').click(function(){
 		
 		$('.checkbox input').each(function(){
 			var self = $(this);
+			var name = self.attr('name');
 			if(self.is(':checked')){ //If options checked
-				var name = self.attr('name');
 				options[name] = true;
-				setUserPreferences(options);
-				getUserPreferences(options);
 			}
+			else{
+				options[name] = false;
+			}
+			setUserPreferences(options);
 		})
 	})
 
@@ -28,7 +30,6 @@ $('document').ready(function(){
 		chrome.storage.sync.set(options, function(){ 
 			// Maybe send a signal or something
 			console.log('saved');
-			message('Setting saved');
 		});
 	}
 
