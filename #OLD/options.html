@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cache Cleaner</title>
+		<!--	 CSS -->
+		<link rel="stylesheet" href="static/css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<!-- JS -->
+		<script src="static/js/jquery.min.js"></script>
+		<script src="popup.js"></script>
+		<script type="text/javascript">
+			function changer(c) {
+			 
+			    if (c == 1) {
+			        document.getElementById("cache").innerHTML = "Cache";
+			        document.getElementById("appcache").innerHTML = "AppCache ";
+			        document.getElementById("cookies").innerHTML = "Cookies";
+			        document.getElementById("websql").innerHTML = "WebSQL ";
+			        document.getElementById("indexdb").innerHTML = "IndexDB ";
+			        document.getElementById("formdata").innerHTML = "Données de formulaires";
+			        document.getElementById("filesystems").innerHTML = "Fichiers Systèmes ";
+			        document.getElementById("localstorage").innerHTML = "Stockage Local ";
+			        document.getElementById("plugindata").innerHTML = "Données de Plugins ";
+			        document.getElementById("download").innerHTML = "Téléchargements ";
+			        document.getElementById("history").innerHTML = "Historique";
+			        document.getElementById("passwords").innerHTML = "Mots de Passes";
+			        document.getElementById("checkbox_left").style.marginRight="inherit";
+			    }
+			    else if (c == 2) {
+			        document.getElementById("cache").innerHTML = "Cache";
+			        document.getElementById("appcache").innerHTML = "AppCache ";
+			        document.getElementById("cookies").innerHTML = "Cookies";
+			        document.getElementById("websql").innerHTML = "WebSQL ";
+			        document.getElementById("indexdb").innerHTML = "IndexDB ";
+			        document.getElementById("formdata").innerHTML = "FormData";
+			        document.getElementById("filesystems").innerHTML = "FileSystems ";
+			        document.getElementById("localstorage").innerHTML = "LocalStorage ";
+			        document.getElementById("plugindata").innerHTML = "PluginData ";
+			        document.getElementById("download").innerHTML = "Download ";
+			        document.getElementById("history").innerHTML = "History";
+			        document.getElementById("passwords").innerHTML = "Passwords";
+			        document.getElementById("checkbox_left").style.marginRight="103px";
+			    }
+			    else if (c == 3) {
+			        document.getElementById("cache").innerHTML = "缓存";
+			        document.getElementById("appcache").innerHTML = "应用缓存 ";
+			        document.getElementById("cookies").innerHTML = "Cookies";
+			        document.getElementById("websql").innerHTML = "WebSQL数据库 ";
+			        document.getElementById("indexdb").innerHTML = "IndexDB数据库 ";
+			        document.getElementById("formdata").innerHTML = "表单数据";
+			        document.getElementById("filesystems").innerHTML = "系统文件 ";
+			        document.getElementById("localstorage").innerHTML = "本地存储 ";
+			        document.getElementById("plugindata").innerHTML = "插件数据 ";
+			        document.getElementById("download").innerHTML = "历史记录 ";
+			        document.getElementById("history").innerHTML = "历史记录";
+			        document.getElementById("passwords").innerHTML = "密码";
+			        document.getElementById("checkbox_left").style.marginRight="68px";
+			    }
+			    else if (c == 4) {
+			        document.getElementById("cache").innerHTML = "Brebi";
+			        document.getElementById("cookies").innerHTML = "Chevre";
+			    }
+			    else if (c == 5) {
+			        document.getElementById("cache").innerHTML = "Citron";
+			        document.getElementById("cookies").innerHTML = "Orange";
+			    }
+			    else return;
+			 
+			}
+		</script>
+	</head>	
+<body>	
+	<div id="container_options">
+		<div id="options">
+				<a href="popup.html">
+					<img src="static/img/options.jpg">
+				</a>
+			</div>
+		<label class="title" for="title">Smart Cache Cleaner</label>
+		<div class="flags">
+			<img class="fr" src="static/img/flags/fr.jpg" onclick="changer(1);" />
+			<img class="en" src="static/img/flags/en.jpg" onclick="changer(2);" />
+			<img class="chi" src="static/img/flags/chi.jpg" onclick="changer(3);" />
+			<img class="por" src="static/img/flags/por.jpg" onclick="changer(4);" />
+			<img class="all" src="static/img/flags/all.jpg" onclick="changer(5);" />
+			<img class="esp" src="static/img/flags/esp.jpg" onclick="changer(6);" />
+		</div>
+		<div class="checkbox">
+			<div id="checkbox_left">
+				<label>
+					<input type="checkbox" name="cache" value="cache"> <p id="cache">Cache</p>
+				</label>
+				<br />
+				<label>
+					<input type="checkbox" name="appcache" value="appcache"> <p id="appcache">AppCache</p>
+				</label>
+				<br />
+				<label>
+					<input type="checkbox" name="cache" value="cookies"> <p id="cookies">Cookies</p>
+				</label>
+				<br />
+				<label>
+					<input type="checkbox" name="appcache" value="websql"> <p id="websql">WebSQL</p>
+				</label>
+				<br />
+				<label>
+					<input type="checkbox" name="cache" value="indexdb"> <p id="indexdb">IndexDB</p>
+				</label>
+				<br />
+				<label>
+					<input type="checkbox" name="appcache" value="formdata"> <p id="formdata">FormData</p>
+				</label>
+			</div>
+			<div class="checkbox_right">
+				<label>
+					<input type="checkbox" name="cache" value="filesystems"> <p id="filesystems">FileSystems</p>
+				</label>
+				<br />
+				<label>
+					<input type="checkbox" name="appcache" value="localstorage"> <p id="localstorage">LocalStorage</p>
+				</label>
+				<br />
+				<label>
+					<input type="checkbox" name="cache" value="plugindata"> <p id="plugindata">PluginData</p>
+				</label>
+				<br />
+				<label>
+					<input type="checkbox" name="appcache" value="download"> <p id="download">Download</p>
+				</label>
+				<br />
+				<label>
+					<input type="checkbox" name="cache" value="history"> <p id="history">History</p>
+				</label>
+				<br />
+				<label>
+					<input type="checkbox" name="appcache" value="passwords"> <p id="passwords">Passwords</p>
+				</label>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

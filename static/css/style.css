@@ -1,3 +1,137 @@
-.top-buffer { 
-	margin-top:10px; 
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+/********************************************************************************************** MAIN PAGE ***********************************************************************/ 
+
+#container {
+	width: 200px;
+	height: 156px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+#container label.title {
+	margin-left: 15px;
+}
+
+.inputs {
+	margin-top: 20px;
+}
+
+/* HOME PAGE */
+.days {
+	margin-left: 15px;
+}
+
+.days, .hours, .min, .sec {
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 28px;
+	margin-left: 0px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.days, .hours, .min {
+	margin-right: 5px;
+}
+
+#txt_input {
+	margin-bottom: 20px;
+}
+
+#txt_days {
+	margin-left: -5px;
+}
+
+#txt_hours {
+	margin-left: 4px;
+}
+
+#txt_min {
+	margin-left: 9px;
+}
+
+#txt_sec {
+	margin-left: 17px;
+}
+
+#txt_days, .txt_hours, .txt_min, .txt_sec {
+}
+
+#submit {
+	background-color:#da534f;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	border: none;
+}
+#submit:hover {
+	background-color:#eb5b57;
+}
+#submit:active {
+	position:relative;
+	top:1px;
+}
+
+/******************************************************************************************* OPTIONS PAGE ***********************************************************************/ 
+
+#container_options {
+	width: 400px;
+	height: 250px;
+	margin-top: 20px;
+}
+
+#options img {
+	float: right;
+	margin-right: -6px;
+	margin-top: -15px;
+}
+
+div#container_options label.title {
+	margin-left: 126px;
+}
+
+.flags {
+	width: 100%;
+	border-bottom: 1px solid #aaa;
+	border-top: 1px solid #aaa;
+	margin-top: 10px;
+}
+
+.flags img {
+	margin-top: 10px;
+	margin-bottom: 7px;
+	margin-right: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.fr {
+	margin-left: 17px;
+}
+
+.checkbox {
+	margin-top: 20px;
+}
+
+#checkbox_left {
+	float: left;
+	margin-right: 103px;
+	margin-left: 13px;
+}
+
+#checkbox_left p, .checkbox_right p {
+	display: inherit;
 }

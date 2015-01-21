@@ -4,14 +4,7 @@
 		"description": "Titre de l'application dans le webstore"
 	},
 	"appDesc":{
-		"message": " Simple extension Chromium/Opera permettant de vider les donnees cache de votre navigateur. Ces donnees peuvent etre vider depuis les:
-		* les 10 dernieres minutes
-		* la derniere demie heure
-		* la derniere heure
-		* une periode d'un jour de maintenant
-		* une semaine de maintenant
-		* depuis toujours.
-		",
+		"message": " Simple extension Chromium/Opera permettant de vider les donnees cache de votre navigateur en fonction d'une duree specifique",
 		"description": "Description en Francais de l'extension dans le webstore"
 	}
 }
