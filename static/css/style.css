@@ -74,15 +74,16 @@ body {
 }
 #all-cache-p {
 	float: left;
+	margin-top: 19px;
+
 }
 #all-time {
 	float: left;
     margin-left: 25%;
-    margin-top: -13px;
 }
 #all-time-p {
 	float: left;
-	margin-top: -17px;
+	margin-top: 2px;
 }
 
 #submit {
