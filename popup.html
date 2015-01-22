@@ -7,31 +7,6 @@
 		<script src="static/js/jquery.min.js"></script>
 		<script src="popup.js"></script>
 		<script src="static/js/our.js"></script>
-        <style type="text/css">
-            .bouton
-            {
-                color:#0000ff;
-                font-size:24px;
-                cursor:pointer;
-            }
-            .bouton:hover
-            {
-                text-decoration:underline;
-            }
-            .texte
-            {
-                border:1px solid #333333;
-                background:#eeeeee;
-                padding:10px;
-                color:#333333;
-            }
-            .texte:hover
-            {
-                border:1px solid #000000;
-                background:#cccccc;
-                color:#000000;
-            }
-        </style>
 	</head>		
 	<body>
         <div id="container">
@@ -41,10 +16,10 @@
             <form class="text-center">
                 <label class="title" for="title">Smart Cache Cleaner</label>
                 <div class="inputs">
-                    <input class="days" type="text" value="00" />
-                    <input class="hours" type="text" value="00" />
-                    <input class="min" type="text" value="01" />
-                    <input class="sec" type="text" value="00"/>
+                    <input class="days" type="text" value="365" />
+                    <input class="hours" type="text" value="24" />
+                    <input class="min" type="text" value="60" />
+                    <input class="sec" type="text" value="60"/>
                 </div>
                 <div class="txt_input">
                     <label id="txt_days" for="txt_days">Days</label>
@@ -52,7 +27,13 @@
                     <label id="txt_min" for="txt_min">Min</label>
                     <label id="txt_sec" for="txt_sec">Sec</label>
                 </div>
-                <button  id="submit" type="button">Done</button>
+                <label>
+                    <input id="all-cache" type="checkbox" name="cache" value="cache"> <p id="all-cache-p">Tout les caches</p>
+                </label>
+                <label>
+                    <input id="all-time" type="checkbox" name="cache" value="cache"> <p id="all-time-p">Sans temps</p>
+                </label>
+                <button  id="submit" type="button">Netoyer</button>
             </form>
         </div>
         <div id="container_options">
@@ -71,7 +52,7 @@
             <div class="checkbox">
                 <div id="checkbox_left">
                     <label>
-                        <input id="cache" type="checkbox" name="cache" value="cache"> <p>Cache</p>
+                        <input type="checkbox" name="cache" value="cache"> <p id="cache">Cache</p>
                     </label>
                     <br />
                     <label>
