@@ -14,7 +14,7 @@ var callback = function notify(){
 	Array of period in millisecond
 */ 
 var millisecondPer = {
-	'ten_minutes': 100 * 60 * 10,
+	'ten_minutes': 1000 * 60 * 10,
 	'half_hour': 1000 * 60 * 30,
 	'hour': 1000 * 60 * 60, 
 	'day': 1000 * 60 * 60 * 24,
