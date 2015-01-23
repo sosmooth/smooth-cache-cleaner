@@ -16,18 +16,13 @@ $('document').ready(function(){
 		}
 	}
 
-	// $('.days').on('change', function(){
-	$('.days').bind('change keyup input', function(){
+	// Prevent element's value to be chars
+	$('.days, .hours, .min, .sec').keyup(function(){
 		var self = $(this)
-		var val = parseInt(self.val());
+		var val = self.val();
+		var name = self.prop('name')
 
-		if (val < 0 ){
-			self.val('0');
-		}
-		else if (self > 365){
-			self.val('365');
-		}
-		
+		self.val(val.replace(/\D/, ''));
 	})
 
 	$('#submit').click(function(){
