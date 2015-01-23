@@ -1,6 +1,8 @@
 $('document').ready(function(){
 
-	// Convertit les valeur recu en millisecondes
+	/*
+		Convert a value to millisecond according to the type passed
+	*/
 	function convert_to_milliseconds(value, type){
 		if (type === 'day') {
 			return 1000 * 60 * 60 * 24 * value ;
@@ -16,7 +18,9 @@ $('document').ready(function(){
 		}
 	}
 
-	// Prevent element's value to be chars
+	/*
+		Prevent user to insert string characters in the inputs
+	*/
 	$('.days, .hours, .min, .sec').keyup(function(){
 		var self = $(this)
 		var val = self.val();
@@ -25,7 +29,9 @@ $('document').ready(function(){
 		self.val(val.replace(/\D/, ''));
 	})
 
-	// Select/Deselect all caches
+	/*
+		Handle Check/UnCheck of all caches
+	*/
 	$('#all-cache').change(function(){
 		if ($(this).is(':checked')){
 			$('input[type=checkbox]').each(function(){
@@ -46,7 +52,9 @@ $('document').ready(function(){
 	$('#submit').click(function(){
 		// var val = $('#since').val();
 
-
+		/*
+			Converts every inputs in milliseconds
+		*/
 		var days = convert_to_milliseconds($('.days').val(), 'day');
 		var hours = convert_to_milliseconds($('.hours').val(), 'hour');
 		var mins = convert_to_milliseconds($('.min').val(), 'min');
@@ -58,7 +66,10 @@ $('document').ready(function(){
 
 		var caches_to_clean = {}
 
-		// Getting caches to clean
+		/*
+			Gets all caches checked and insert them into a array.
+			That array represents all the caches to be cleaned
+		*/
 		$('.checkbox input').each(function(){
 			var self = $(this);
 			var name = self.attr('name');
