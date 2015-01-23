@@ -25,6 +25,7 @@ $('document').ready(function(){
 		self.val(val.replace(/\D/, ''));
 	})
 
+	// Select/Deselect all caches
 	$('#all-cache').change(function(){
 		if ($(this).is(':checked')){
 			$('input[type=checkbox]').each(function(){
@@ -45,6 +46,7 @@ $('document').ready(function(){
 	$('#submit').click(function(){
 		// var val = $('#since').val();
 
+
 		var days = convert_to_milliseconds($('.days').val(), 'day');
 		var hours = convert_to_milliseconds($('.hours').val(), 'hour');
 		var mins = convert_to_milliseconds($('.min').val(), 'min');
@@ -54,21 +56,38 @@ $('document').ready(function(){
 		
 		console.log(" clear since : "+total_time);
 
+		var caches_to_clean = {}
 
-		// The function below call the function <clearCache>
+		// Getting caches to clean
+		$('.checkbox input').each(function(){
+			var self = $(this);
+			var name = self.attr('name');
+			if( name !== 'all-cache'){
+				if(self.is(':checked'))
+					caches_to_clean[name] = true ;
+				else
+					caches_to_clean[name] = false ;
+			}
+		})
+
+		console.log(caches_to_clean);
+
+		// The function below calls the function <clearCache>
 		// from background.js
-		chrome.extension.getBackgroundPage().clearCache(total_time);
+		
+		// chrome.extension.getBackgroundPage().clearCache();
 
 		/*Message listener*/
 		// listen to messages coming from <background.js>
-		chrome.extension.onMessage.addListener(
-			function(request, sender, sendResponse){
-				if (request.response){
-					response = request.response;
-					console.log(request, sender);
-					//Sending a response back
-					sendResponse({success: 200}); 
-				}
-		}) 
+		
+		// chrome.extension.onMessage.addListener(
+		// 	function(request, sender, sendResponse){
+		// 		if (request.response){
+		// 			response = request.response;
+		// 			console.log(request, sender);
+		// 			//Sending a response back
+		// 			sendResponse({success: 200}); 
+		// 		}
+		// }) 
 	});
 });
