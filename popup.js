@@ -25,6 +25,23 @@ $('document').ready(function(){
 		self.val(val.replace(/\D/, ''));
 	})
 
+	$('#all-cache').change(function(){
+		if ($(this).is(':checked')){
+			$('input[type=checkbox]').each(function(){
+				var self = $(this);
+				if(self.val() != 'all-time')
+					self.prop('checked',true);
+			})	
+		}	
+		else{
+			$('input[type=checkbox]').each(function(){
+				var self = $(this);
+				if(self.val() != 'all-time')
+					self.prop('checked',false);
+			})
+		}
+	})
+
 	$('#submit').click(function(){
 		// var val = $('#since').val();
 
