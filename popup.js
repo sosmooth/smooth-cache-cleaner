@@ -50,7 +50,6 @@ $('document').ready(function(){
 	})
 
 	$('#submit').click(function(){
-		// var val = $('#since').val();
 
 		/*
 			Converts every inputs in milliseconds
@@ -64,7 +63,7 @@ $('document').ready(function(){
 		
 		console.log(" clear since : "+total_time);
 
-		var caches_to_clean = {}
+		var caches_list = {}
 
 		/*
 			Gets all caches checked and insert them into a array.
@@ -75,18 +74,18 @@ $('document').ready(function(){
 			var name = self.attr('name');
 			if( name !== 'all-cache'){
 				if(self.is(':checked'))
-					caches_to_clean[name] = true ;
+					caches_list[name] = true ;
 				else
-					caches_to_clean[name] = false ;
+					caches_list[name] = false ;
 			}
 		})
 
-		console.log(caches_to_clean);
+		console.log(caches_list);
 
 		// The function below calls the function <clearCache>
 		// from background.js
 		
-		// chrome.extension.getBackgroundPage().clearCache();
+		// chrome.extension.getBackgroundPage().clearCache(total_time, caches_list);
 
 		/*Message listener*/
 		// listen to messages coming from <background.js>
