@@ -11,15 +11,17 @@
 	<body>
         <div id="container">
             <div id="options"> 
-                 <img src="static/img/options.jpg" id="bouton_container">
+                 <a href="#" >
+                    <img src="static/img/options.jpg" id="gearing-options">
+                </a>
             </div>
             <form class="text-center">
                 <label class="title" for="title">Smart Cache Cleaner</label>
                 <div class="inputs">
-                    <input class="days" type="text" value="365" maxlength="3" />
-                    <input class="hours" type="text" value="24" maxlength="2" />
-                    <input class="min" type="text" value="60"  maxlength="2" />
-                    <input class="sec" type="text" value="60" maxlength="2"/>
+                    <input class="days" name="days" type="text" value="365" maxlength="3" />
+                    <input class="hours" name="hours" type="text" value="24" maxlength="2" />
+                    <input class="min" name="min" type="text" value="60"  maxlength="2" />
+                    <input class="sec" name="sec" type="text" value="60" maxlength="2"/>
                 </div>
                 <div class="txt_input">
                     <label id="txt_days" for="txt_days">Days</label>
@@ -28,17 +30,19 @@
                     <label id="txt_sec" for="txt_sec">Sec</label>
                 </div>
                 <label>
-                    <input id="all-cache" type="checkbox" name="cache" value="cache"> <p id="all-cache-p">Tout les caches</p>
+                    <input id="all-cache" type="checkbox" name="all-cache" value="all-cache"> <p id="all-cache-p">Tous les caches</p>
                 </label>
                 <label>
-                    <input id="all-time" type="checkbox" name="cache" value="cache"> <p id="all-time-p">Sans temps</p>
+                    <input id="all-time" type="checkbox" name="all-time" value="all-time"> <p id="all-time-p">Sans temps</p>
                 </label>
-                <button  id="submit" type="button">Netoyer</button>
+                <button  id="submit" type="button">Nettoyer</button>
             </form>
         </div>
         <div id="container_options">
             <div id="options">
-                <img src="static/img/options.jpg" id="bouton_container">
+                <a href="#" >
+                    <img src="static/img/options.jpg" id="gearing-home">
+                </a>
             </div>
             <label class="title" for="title">Smart Cache Cleaner</label>
             <div class="flags">
@@ -52,52 +56,52 @@
             <div class="checkbox">
                 <div id="checkbox_left">
                     <label>
-                        <input type="checkbox" name="cache" value="cache"> <p id="cache">Cache</p>
+                        <input id="cache" type="checkbox" name="cache" value="cache"> <p >Cache</p>
                     </label>
                     <br />
                     <label>
-                        <input type="checkbox" name="appcache" value="appcache"> <p id="appcache">AppCache</p>
+                        <input id="appcache" type="checkbox" name="appcache" value="appcache"> <p >AppCache</p>
                     </label>
                     <br />
                     <label>
-                        <input type="checkbox" name="cache" value="cookies"> <p id="cookies">Cookies</p>
+                        <input id="cookies" type="checkbox" name="cookies" value="cookies"> <p >Cookies</p>
                     </label>
                     <br />
                     <label>
-                        <input type="checkbox" name="appcache" value="websql"> <p id="websql">WebSQL</p>
+                        <input id="websql" type="checkbox" name="websql" value="websql"> <p >WebSQL</p>
                     </label>
                     <br />
                     <label>
-                        <input type="checkbox" name="cache" value="indexdb"> <p id="indexdb">IndexDB</p>
+                        <input id="indexdb" type="checkbox" name="indexdb" value="indexdb"> <p >IndexDB</p>
                     </label>
                     <br />
                     <label>
-                        <input type="checkbox" name="appcache" value="formdata"> <p id="formdata">FormData</p>
+                        <input id="formdata" type="checkbox" name="formdata" value="formdata"> <p >FormData</p>
                     </label>
                 </div>
                 <div class="checkbox_right">
                     <label>
-                        <input type="checkbox" name="cache" value="filesystems"> <p id="filesystems">FileSystems</p>
+                        <input id="filesystems" type="checkbox" name="filesystems" value="filesystems"> <p >FileSystems</p>
                     </label>
                     <br />
                     <label>
-                        <input type="checkbox" name="appcache" value="localstorage"> <p id="localstorage">LocalStorage</p>
+                        <input id="localstorage" type="checkbox" name="localstorage" value="localstorage"> <p >LocalStorage</p>
                     </label>
                     <br />
                     <label>
-                        <input type="checkbox" name="cache" value="plugindata"> <p id="plugindata">PluginData</p>
+                        <input id="plugindata" type="checkbox" name="plugindata" value="plugindata"> <p >PluginData</p>
                     </label>
                     <br />
                     <label>
-                        <input type="checkbox" name="appcache" value="download"> <p id="download">Download</p>
+                        <input id="download" type="checkbox" name="download" value="download"> <p >Download</p>
                     </label>
                     <br />
                     <label>
-                        <input type="checkbox" name="cache" value="history"> <p id="history">History</p>
+                        <input id="history" type="checkbox" name="history" value="history"> <p >History</p>
                     </label>
                     <br />
                     <label>
-                        <input type="checkbox" name="appcache" value="passwords"> <p id="passwords">Passwords</p>
+                        <input id="passwords" type="checkbox" name="passwords" value="passwords"> <p id="passwords">Passwords</p>
                     </label>
                 </div>
             </div>
