@@ -77,7 +77,7 @@ $('document').ready(function(){
 
 		var total_time = days + hours + mins + sec ;
 		
-		console.log(" clear since : "+total_time);
+		console.log("clear since : "+total_time);
 
 		var caches_list = {}
 
