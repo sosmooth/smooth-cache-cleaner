@@ -1,5 +1,5 @@
 # SmoothcacheCleaner
-====================
+---------------------
 
 Small extension that cleans your cache according to a specified elapsed time.
 With Smart Cache Cleaner,  you are able to clean your cache since :
@@ -12,14 +12,18 @@ With Smart Cache Cleaner,  you are able to clean your cache since :
 
 
 ## Authors
-==========
+----------
 
 *   Maxime Defachelle
 *   Josue Kouka 
 
 ## Versions
-============
+-----------
 
 
 ## How does it work
-====================
+-------------------
+
+## License
+----------
+
