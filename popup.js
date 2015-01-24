@@ -45,6 +45,16 @@ $('document').ready(function(){
 		self.val(val.replace(/\D/, ''));
 	})
 
+	/* 
+		Handle the fact that if a checkbox is unchecked
+		the "ALL" checkbox get unchecked too
+	*/ 
+	$('input[type=checkbox]').change(function(){
+		if ($(this).prop('checked') !== true && $(this).attr('name') !== 'all-cache' ){
+			$('#all-cache').prop('checked',false);
+		}
+	})
+
 	/*
 		Handle Check/UnCheck of all caches
 	*/
