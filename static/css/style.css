@@ -1,5 +1,10 @@
+html {
+	height: 200px;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
+	height: 226px;
 }
 
 /********************************************************************************************** MAIN PAGE ***********************************************************************/ 
@@ -100,6 +105,7 @@ body {
 	text-decoration:none;
 	border: none;
 	margin-left: 16px;
+	margin-top: 10px;
 }
 #submit:hover {
 	background-color:#eb5b57;
@@ -113,8 +119,8 @@ body {
 
 #container_options {
 	width: 400px;
-	height: 250px;
-	margin-top: 90px;
+	height: 226px;
+	margin-top: 20px;
 }
 
 #options img {
@@ -124,7 +130,7 @@ body {
 }
 
 div#container_options label.title {
-	margin-left: 126px;
+	margin-left: 140px;
 }
 
 .flags {
