@@ -16,36 +16,6 @@ $('document').ready(function(){
 		})
 	})
 
-	/*************************************** A finir ****************************************************************/
-
-	// Cache la div dès que le DOM est prêt
-	$('#container_options').hide();
-
-	// Affiche la div au clique sur l'engrenage (home)											
-	$('#gearing-options').click(function() {
-		$('#container').hide();
-		$('#container_options').show();
-		return false;
-	});
-
-	$('#gearing-home').click(function() {
-		$('#container_options').hide();
-		$('#container').show();
-		return false;
-	});
-
-	// Effet de déplacement de la div
-	$('#gearing-options').click(function() {
-		$('#container_options').toggle(400);
-		return false;
-	});
-	$('#gearing-home').click(function() {
-		$('#container').toggle(400);
-		return false;
-	});
-
-	/****************************************************************************************************************/
-
 	/*
 		Load user preferences when on option page
 	*/ 
