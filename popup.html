@@ -15,27 +15,53 @@
                     <img src="static/img/options.jpg" id="gearing-options">
                 </a>
             </div>
-            <form class="text-center">
-                <label class="title" for="title">Smart Cache Cleaner</label>
-                <div class="inputs">
-                    <input class="days" name="days" type="text" value="365" maxlength="3" />
-                    <input class="hours" name="hours" type="text" value="24" maxlength="2" />
-                    <input class="min" name="min" type="text" value="60"  maxlength="2" />
-                    <input class="sec" name="sec" type="text" value="60" maxlength="2"/>
+            <div class="submit_box">
+                <p id="title_name">Smart Cache Cleaner</p>
+            </div>
+             <form>
+                <div class="inputs_home">
+                    <div>
+                        <p>
+                            <label id="txt_days" for="txt_days">Jours</label><br />
+                            <input id="days" name="days" type="text" value="365" maxlength="3" />
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                             <label id="txt_hours" for="txt_hours">Heures</label><br />
+                            <input id="hours" name="hours" type="text" value="24" maxlength="2" />
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label id="txt_min" for="txt_min">Minutes</label><br />
+                            <input id="min" name="min" type="text" value="60"  maxlength="2" />
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label id="txt_sec" for="txt_sec">Secondes</label><br />
+                            <input id="sec" name="sec" type="text" value="60" maxlength="2"/>
+                        </p>
+                    </div>
                 </div>
-                <div class="txt_input">
-                    <label id="txt_days" for="txt_days">Days</label>
-                    <label id="txt_hours" for="txt_hours">Hours</label>
-                    <label id="txt_min" for="txt_min">Min</label>
-                    <label id="txt_sec" for="txt_sec">Sec</label>
+                <div class="checkboxs_cache">
+                    <div>
+                         <label>
+                            <input id="all-cache" type="checkbox" name="all-cache" value="all-cache"> <span id="all-cache-p">Tous types de caches</span>
+                        </label>
+                    </div>
                 </div>
-                <label>
-                    <input id="all-cache" type="checkbox" name="all-cache" value="all-cache"> <p id="all-cache-p">Tous les caches</p>
-                </label>
-                <label>
-                    <input id="all-time" type="checkbox" name="all-time" value="all-time"> <p id="all-time-p">Sans temps</p>
-                </label>
-                <button  id="submit" type="button">Nettoyer</button>
+                <div class="checkboxs_time">
+                    <div>
+                         <label>
+                            <input id="all-time" type="checkbox" name="all-time" value="all-time"> <span id="all-time-p">Sans durée de temps</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="submit_box">
+                    <button  id="submit" type="button">Nettoyer</button>
+                </div>
             </form>
         </div>
         <div id="container_options">
@@ -44,7 +70,9 @@
                     <img src="static/img/options.jpg" id="gearing-home">
                 </a>
             </div>
-            <label class="title" for="title">Smart Cache Cleaner</label>
+            <div class="submit_box">
+                <p id="title_name">Smart Cache Cleaner</p>
+            </div>
             <div class="flags">
                 <img class="fr" src="static/img/flags/fr.jpg" onclick="changer(1);" />
                 <img class="en" src="static/img/flags/en.jpg" onclick="changer(2);" />
@@ -108,5 +136,3 @@
         </div>
 	</body>
 </html>
-
-
