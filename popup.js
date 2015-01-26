@@ -83,6 +83,20 @@ $('document').ready(function(){
 		}
 	})
 
+	/*
+		Handle behaviour when no time limit checked
+	*/ 
+	$('#all-time').change(function(){
+		if ($(this).is(":checked")){
+			$('.days').val('999');
+			$('.hours, .min, .sec').val('99');
+		}
+		else{
+			$('.days').val('000');
+			$('.hours, .min, .sec').val('00');
+		}
+	})
+
 	/* 
 		Handle the fact that if a checkbox is unchecked
 		the "ALL" checkbox get unchecked too
