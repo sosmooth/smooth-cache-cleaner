@@ -39,10 +39,32 @@ $('document').ready(function(){
 	*/
 	$('.days, .hours, .min, .sec').keyup(function(){
 		var self = $(this)
+		// var val = parseInt(self.val());
 		var val = self.val();
-		var name = self.prop('name')
+		var name = self.prop('name');
 
-		self.val(val.replace(/\D/, ''));
+		console.log(val);
+
+		if ( isNaN(val)){
+			if (name == 'days')
+				self.val('000');
+			else
+				self.val('00')
+		}
+		else if (name == 'days' && val > 365 ){
+			self.val('000');
+		}
+		else if (name == 'hours' && val > 24 ){
+			self.val('00');
+		}
+		else if (name == 'min' && val > 60 ){
+			self.val('00');
+		}
+		else if (name == 'sec' && val > 60 ){
+			self.val('00');
+		}
+
+		// self.val(val.replace(/\D/, ''));
 	})
 
 	/* 
