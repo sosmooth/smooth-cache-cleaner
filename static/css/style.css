@@ -5,92 +5,51 @@ html {
 body {
 	font-family: 'Open Sans', sans-serif;
 	height: 226px;
+	width: 350px;
+	margin: 30px auto;
+	font-size: 1em;
+	background: #FFF;
+	color: #777;
 }
 
 /********************************************************************************************** MAIN PAGE ***********************************************************************/ 
 
-#container {
-	width: 210px;
-	height: 156px;
+#options img {
+	float: right;
+}
+.submit_box p {
+	font-weight: 700;
+	color: #000;
+}
+#title_name {
+	margin-left: 20px;
+}
+.inputs_home {
+	width: 350px;
+	white-space: nowrap;
 	text-align: center;
-	margin-top: 20px;
 }
-
-#container label.title {
-	margin-left: 15px;
+.inputs_home div {
+	width: 75px;
+	display: inline-block;
+	white-space: normal;
 }
-
-.inputs {
-	margin-top: 20px;
-}
-
-/* HOME PAGE */
-.days {
+#days {
 	width: 60px;
-	height: 40px;
-	border-radius: 5px;
-	font-size: 28px;
-	margin-left: 0px;
-	font-weight: bold;
 	text-align: center;
 }
-
-.hours, .min, .sec {
+.inputs_home input {
 	width: 40px;
-	height: 40px;
-	border-radius: 5px;
-	font-size: 28px;
-	margin-left: 0px;
-	font-weight: bold;
 	text-align: center;
 }
-
-.days, .hours, .min {
-	margin-right: 5px;
+.checkboxs_cache, .checkboxs_time, .submit_box {
+	width: 350px;
+	white-space: nowrap;
+	text-align: center;
 }
-
-#txt_input {
-	margin-bottom: 20px;
+.submit_box {
+	margin-top: 20px;
 }
-
-#txt_days {
-	margin-left: -5px;
-}
-
-#txt_hours {
-	margin-left: 4px;
-}
-
-#txt_min {
-	margin-left: 9px;
-}
-
-#txt_sec {
-	margin-left: 17px;
-}
-
-#txt_days, .txt_hours, .txt_min, .txt_sec {
-}
-
-#all-cache {
-	float: left;
-    margin-top: 20px;
-    margin-left: 25%;
-}
-#all-cache-p {
-	float: left;
-	margin-top: 19px;
-
-}
-#all-time {
-	float: left;
-    margin-left: 25%;
-}
-#all-time-p {
-	float: left;
-	margin-top: 2px;
-}
-
 #submit {
 	background-color:#da534f;
 	-moz-border-radius:3px;
@@ -104,15 +63,31 @@ body {
 	padding:6px 24px;
 	text-decoration:none;
 	border: none;
-	margin-left: 16px;
-	margin-top: 10px;
 }
 #submit:hover {
 	background-color:#eb5b57;
 }
-#submit:active {
-	position:relative;
-	top:1px;
+#days {
+	width: 60px;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 28px;
+	margin-left: 0px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#hours, #min, #sec {
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 28px;
+	margin-left: 0px;
+	font-weight: bold;
+	text-align: center;
+}
+#all-cache-p, #all-time-p {
+	color: #000;
 }
 
 /******************************************************************************************* OPTIONS PAGE ***********************************************************************/ 
@@ -121,16 +96,6 @@ body {
 	width: 400px;
 	height: 226px;
 	margin-top: 20px;
-}
-
-#options img {
-	float: right;
-	margin-right: -6px;
-	margin-top: -15px;
-}
-
-div#container_options label.title {
-	margin-left: 140px;
 }
 
 .flags {
