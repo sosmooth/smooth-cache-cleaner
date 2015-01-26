@@ -38,8 +38,7 @@ $('document').ready(function(){
 		Prevent user to insert string characters in the inputs
 	*/
 	$('.days, .hours, .min, .sec').keyup(function(){
-		var self = $(this)
-		// var val = parseInt(self.val());
+		var self = $(this);		// var val = parseInt(self.val());
 		var val = self.val();
 		var name = self.prop('name');
 
@@ -65,6 +64,23 @@ $('document').ready(function(){
 		}
 
 		// self.val(val.replace(/\D/, ''));
+	})
+
+	/*
+		Fill input when user select another input
+	*/ 
+	$('.days, .hours, .min, .sec').change(function(){
+		var self = $(this);
+		var val = self.val();
+		var name = self.prop('name');
+
+		if ( val === '' &&  name === 'days'){
+			self.val('000');
+		}
+
+		if ( val === '' &&  name !== 'days'){
+			self.val('00');
+		}
 	})
 
 	/* 
