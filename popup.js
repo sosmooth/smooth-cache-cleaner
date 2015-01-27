@@ -86,8 +86,8 @@ $('document').ready(function(){
 	*/ 
 	$('#all-time').change(function(){
 		if ($(this).is(":checked")){
-			$('#days').val('999');
-			$('#hours, #min, #sec').val('99');
+			$('#days').val('###');
+			$('#hours, #min, #sec').val('##');
 		}
 		else{
 			$('#days').val('000');
