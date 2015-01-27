@@ -37,12 +37,10 @@ $('document').ready(function(){
 	/*
 		Prevent user to insert string characters in the inputs
 	*/
-	$('.days, .hours, .min, .sec').keyup(function(){
+	$('#days, #hours, #min, #sec').keyup(function(){
 		var self = $(this);		// var val = parseInt(self.val());
 		var val = self.val();
 		var name = self.prop('name');
-
-		console.log(val);
 
 		if ( isNaN(val)){
 			if (name == 'days')
@@ -69,7 +67,7 @@ $('document').ready(function(){
 	/*
 		Fill input when user select another input
 	*/ 
-	$('.days, .hours, .min, .sec').change(function(){
+	$('#days, #hours, #min, #sec').change(function(){
 		var self = $(this);
 		var val = self.val();
 		var name = self.prop('name');
@@ -88,12 +86,12 @@ $('document').ready(function(){
 	*/ 
 	$('#all-time').change(function(){
 		if ($(this).is(":checked")){
-			$('.days').val('999');
-			$('.hours, .min, .sec').val('99');
+			$('#days').val('999');
+			$('#hours, #min, #sec').val('99');
 		}
 		else{
-			$('.days').val('000');
-			$('.hours, .min, .sec').val('00');
+			$('#days').val('000');
+			$('#hours, #min, #sec').val('00');
 		}
 	})
 
