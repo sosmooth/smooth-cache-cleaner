@@ -95,6 +95,40 @@ $('document').ready(function(){
 		}
 	})
 
+	/*
+		Handle in/decrementation with key arrows
+	*/ 
+	$("#days, #hours, #min, #sec").keydown(function(event) {
+		var self = $(this);
+		var val = parseInt(self.val());
+		var max = self.attr('max');
+
+		if (event.keyCode == 38 && (val < max)) {
+			self.val(val + 1);			
+		}
+		else if (event.keyCode == 40  && (val > 0)) {
+			self.val(val - 1);
+		}
+		else {
+
+		}
+	});
+
+	/*
+		Handle in/decrementation with key wheelmouse
+	*/ 
+	$("#days, #hours, #min, #sec").bind("mousewheel", function(event, delta) {
+		console.log(delta);
+        if (delta > 0) {
+            this.value = parseInt(this.value) + 1;
+        } else {
+            if (parseInt(this.value) > 0) {
+                this.value = parseInt(this.value) - 1;
+            }
+        }
+        return false;
+     });
+
 	/* 
 		Handle the fact that if a checkbox is unchecked
 		the "ALL" checkbox get unchecked too
