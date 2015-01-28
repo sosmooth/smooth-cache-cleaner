@@ -118,12 +118,17 @@ $('document').ready(function(){
 		Handle in/decrementation with key wheelmouse
 	*/ 
 	$("#days, #hours, #min, #sec").bind("mousewheel", function(event, delta) {
+		var delta = event.originalEvent.wheelDelta ;
+		var self = $(this);
+		var val = parseInt(self.val());
+		var max = self.attr('max');
+
 		console.log(delta);
-        if (delta > 0) {
-            this.value = parseInt(this.value) + 1;
+        if (delta > 0 && ( val < max )) {
+            self.val( val + 1);
         } else {
-            if (parseInt(this.value) > 0) {
-                this.value = parseInt(this.value) - 1;
+            if (val > 0) {
+                self.val( val - 1);;
             }
         }
         return false;
