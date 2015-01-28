@@ -109,13 +109,11 @@ $('document').ready(function(){
 		else if (event.keyCode == 40  && (val > 0)) {
 			self.val(val - 1);
 		}
-		else {
-
-		}
+		else {	}
 	});
 
 	/*
-		Handle in/decrementation with key wheelmouse
+		Handle in/decrementation with key mouse
 	*/ 
 	$("#days, #hours, #min, #sec").bind("mousewheel", function(event, delta) {
 		var delta = event.originalEvent.wheelDelta ;
@@ -123,7 +121,6 @@ $('document').ready(function(){
 		var val = parseInt(self.val());
 		var max = self.attr('max');
 
-		console.log(delta);
         if (delta > 0 && ( val < max )) {
             self.val( val + 1);
         } else {
@@ -184,10 +181,10 @@ $('document').ready(function(){
 		/*
 			Converts every inputs in milliseconds
 		*/
-		var days = convert_to_milliseconds($('.days').val(), 'day');
-		var hours = convert_to_milliseconds($('.hours').val(), 'hour');
-		var mins = convert_to_milliseconds($('.min').val(), 'min');
-		var sec = convert_to_milliseconds($('.sec').val(), 'sec');
+		var days = convert_to_milliseconds($('#days').val(), 'day');
+		var hours = convert_to_milliseconds($('#hours').val(), 'hour');
+		var mins = convert_to_milliseconds($('#min').val(), 'min');
+		var sec = convert_to_milliseconds($('#sec').val(), 'sec');
 
 		var total_time = days + hours + mins + sec ;
 		
@@ -211,23 +208,24 @@ $('document').ready(function(){
 		})
 
 		console.log(caches_list);
+		console.log(total_time);
 
 		// The function below calls the function <clearCache>
 		// from background.js
 		
-		// chrome.extension.getBackgroundPage().clearCache(total_time, caches_list);
+		chrome.extension.getBackgroundPage().clearCache(total_time, caches_list);
 
 		/*Message listener*/
 		// listen to messages coming from <background.js>
 		
-		// chrome.extension.onMessage.addListener(
-		// 	function(request, sender, sendResponse){
-		// 		if (request.response){
-		// 			response = request.response;
-		// 			console.log(request, sender);
-		// 			//Sending a response back
-		// 			sendResponse({success: 200}); 
-		// 		}
-		// }) 
+		chrome.extension.onMessage.addListener(
+			function(request, sender, sendResponse){
+				if (request.response){
+					response = request.response;
+					console.log(request, sender);
+					//Sending a response back
+					sendResponse({success: 200}); 
+				}
+		}) 
 	});
 });

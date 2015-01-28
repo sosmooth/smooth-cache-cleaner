@@ -16,10 +16,11 @@ function get_elapsed_time(period){
 	Clear the cache according to the specified period
 */ 
 function clearCache(period, options){
-
+	console.log(period);
 	elapsed_time = get_elapsed_time(period);
+	console.log(elapsed_time);
  	// Cleaning the cache
- 	chrome.browsingData.removeCache(
+ 	chrome.browsingData.remove(
  		{"since": elapsed_time}, 
  		options,
  		callback
