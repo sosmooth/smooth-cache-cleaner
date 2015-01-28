@@ -3,6 +3,11 @@
     "txt_hours": "heures",
     "txt_min": "minutes",
     "txt_sec": "secondes",
-    "all-cache": "Tous les caches",
-    "txt_passwords": "Mot de passes"
+    "txt_all-cache": "Tous les caches",
+    "txt_all-time": "Depuis toujours",
+    "txt_submit":  "Nettoyer",
+    "txt_passwords": "Mot de passes",
+    "txt_plugindata": "Donnees des plugins",
+    "txt_filesystems": "Fichier systeme",
+    "txt_formdata": "Donnees de formulaires"
 }
