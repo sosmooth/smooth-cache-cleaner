@@ -14,14 +14,13 @@ body {
 /********************************************************************************************** MAIN PAGE ***********************************************************************/ 
 
 #options img {
-	float: right;
+	position: absolute;
+	top: 2px;
+	right: 2px;
 }
 .submit_box p {
 	font-weight: 700;
 	color: #000;
-}
-#title_name {
-	margin-left: 20px;
 }
 .inputs_home {
 	width: 350px;
@@ -47,6 +46,7 @@ body {
 	text-align: center;
 }
 .submit_box {
+	margin: auto;
 	margin-top: 20px;
 }
 #submit {
@@ -88,6 +88,9 @@ body {
 #all-cache-p, #all-time-p {
 	color: #000;
 }
+#all-time {
+	margin-left: 0;
+}
 
 /******************************************************************************************* OPTIONS PAGE ***********************************************************************/ 
 
@@ -102,6 +105,8 @@ body {
 	border-bottom: 1px solid #aaa;
 	border-top: 1px solid #aaa;
 	margin-top: 10px;
+	margin-left: 4px;
+	text-align: center;
 }
 
 .flags img {
