@@ -23,25 +23,25 @@
                     <div>
                         <p>
                             <label id="txt_days" for="txt_days">Jours</label><br />
-                            <input id="days" name="days" type="text" value="365" maxlength="3" />
+                            <input id="days" name="days" type="text" value="365" maxlength="3" max="365"/>
                         </p>
                     </div>
                     <div>
                         <p>
                              <label id="txt_hours" for="txt_hours">Heures</label><br />
-                            <input id="hours" name="hours" type="text" value="24" maxlength="2" />
+                            <input id="hours" name="hours" type="text" value="24" maxlength="2" max="23"/>
                         </p>
                     </div>
                     <div>
                         <p>
                             <label id="txt_min" for="txt_min">Minutes</label><br />
-                            <input id="min" name="min" type="text" value="60"  maxlength="2" />
+                            <input id="min" name="min" type="text" value="60"  maxlength="2" max="60"/>
                         </p>
                     </div>
                     <div>
                         <p>
                             <label id="txt_sec" for="txt_sec">Secondes</label><br />
-                            <input id="sec" name="sec" type="text" value="60" maxlength="2"/>
+                            <input id="sec" name="sec" type="text" value="60" maxlength="2" max="60"/>
                         </p>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="submit_box">
-                    <button  id="submit" type="button">Nettoyer</button>
+                    <button  id="submit" type="button"><span id="txt_submit">Nettoyer</span></button>
                 </div>
             </form>
         </div>
@@ -129,7 +129,7 @@
                     </label>
                     <br />
                     <label>
-                        <input id="passwords" type="checkbox" name="passwords" value="passwords"> <p id="txt_passwords">Passwords</p>
+                        <input id="passwords" type="checkbox" name="passwords" value="passwords"><p id="txt_passwords">Passwords</p>
                     </label>
                 </div>
             </div>
