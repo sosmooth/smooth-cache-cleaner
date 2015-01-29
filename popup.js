@@ -44,25 +44,6 @@ $('document').ready(function(){
 		var max = self.attr('max');
 		var min = self.attr('min');
 
-		// if ( isNaN(val)){
-		// 	if (name == 'days')
-		// 		self.val('000');
-		// 	else
-		// 		self.val('00')
-		// }
-		// else if (name == 'days' && val > 365 ){
-		// 	self.val('000');
-		// }
-		// else if (name == 'hours' && val > 24 ){
-		// 	self.val('00');
-		// }
-		// else if (name == 'min' && val > 60 ){
-		// 	self.val('00');
-		// }
-		// else if (name == 'sec' && val > 60 ){
-		// 	self.val('00');
-		// }
-
 		if ( isNaN(val)){
 			self.val(min);
 		}
@@ -80,14 +61,11 @@ $('document').ready(function(){
 		var self = $(this);
 		var val = self.val();
 		var name = self.prop('name');
+		var min = self.attr('min');
 
-		if ( val === '' &&  name === 'days'){
-			self.val('000');
-		}
+		if ( val === '' )
+			self.val(min);
 
-		if ( val === '' &&  name !== 'days'){
-			self.val('00');
-		}
 	})
 
 	/*
