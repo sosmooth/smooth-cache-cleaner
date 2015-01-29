@@ -4,10 +4,10 @@ $('document').ready(function(){
 		Convert a value to millisecond according to the type passed
 	*/
 	function convert_to_milliseconds(value, type){
-		if (type === 'day') {
+		if (type === 'days') {
 			return 1000 * 60 * 60 * 24 * value ;
 		}
-		else if (type === 'hour'){
+		else if (type === 'hours'){
 			return 1000 * 60 * 60 * value ;
 		}
 		else if (type === 'min'){
@@ -65,7 +65,6 @@ $('document').ready(function(){
 
 		if ( val === '' )
 			self.val(min);
-
 	})
 
 	/*
@@ -168,12 +167,12 @@ $('document').ready(function(){
 		/*
 			Converts every inputs in milliseconds
 		*/
-		var days = convert_to_milliseconds($('#days').val(), 'day');
-		var hours = convert_to_milliseconds($('#hours').val(), 'hour');
-		var mins = convert_to_milliseconds($('#min').val(), 'min');
-		var sec = convert_to_milliseconds($('#sec').val(), 'sec');
+		var total_time = 0
 
-		var total_time = days + hours + mins + sec ;
+		$('.inputs_home input').each(function(){
+			self = $(this);
+			total_time = total_time + convert_to_milliseconds(self.val(), self.attr('name'));
+		})
 		
 		console.log("clear since : "+total_time);
 
