@@ -1,188 +1,142 @@
-html {
-	height: 200px;
-}
-
-body {
-	font-family: 'Open Sans', sans-serif;
-	height: 226px;
-	margin: 30px auto;
-	font-size: 1em;
-	background: #FFF;
-	color: #777;
-}
-
-/********************************************************************************************** MAIN PAGE ***********************************************************************/ 
-
-#options img {
-	position: absolute;
-	top: 2px;
-	right: 2px;
-}
-.submit_box p {
-	font-weight: 700;
-	color: #000;
-}
-.inputs_home {
-	width: 350px;
-	white-space: nowrap;
-	text-align: center;
-}
-.inputs_home div {
-	width: 75px;
-	display: inline-block;
-	white-space: normal;
-}
-#days {
-	width: 60px;
-	text-align: center;
-}
-.inputs_home input {
-	width: 40px;
-	text-align: center;
-}
-#span_days, #span_hours, #span_min, #span_sec {
-	display: block;
-	width: 124px;
-	position: absolute;
-	padding: 15px;
-	background: none repeat scroll 0 0 #333;
-    border-radius: 3px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-    color: #fff;
-}
-#span_days, #span_hours, #span_min, #span_sec {
-	top: 142px
-}
-#span_days {
-    left: 32px;
-}
-#span_hours {
-    left: 64px;
-}
-#span_min {
-	left: 138px;
-}
-#span_sec {
-	left: 166px;
-}
-#span_days:before, #span_hours:before, #span_min:before, #span_sec:before {
-	content: "";
-	width: 10px;
-	height: 10px;
-	background: #333;
-	-ms-transform: rotate(45deg); /* IE 9 */
-    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-    transform: rotate(45deg);
-    position: absolute;
-}
-#span_days:before {
-	top: -4px;
-}
-#span_hours:before {
-	top: -4px;
-	left: 68px;
-}
-#span_min:before {
-	top: -4px;
-	right: 70px;
-}
-#span_sec:before {
-	top: -4px;
-	right: 20px;
-}
-.checkboxs_cache, .checkboxs_time, .submit_box {
-	width: 350px;
-	white-space: nowrap;
-	text-align: center;
-}
-.submit_box {
-	margin: auto;
-	margin-top: 20px;
-}
-#submit {
-	background-color:#da534f;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:arial;
-	font-size:13px;
-	padding:6px 24px;
-	text-decoration:none;
-	border: none;
-}
-#submit:hover {
-	background-color:#eb5b57;
-}
-#days {
-	width: 60px;
-	height: 40px;
-	border-radius: 5px;
-	font-size: 28px;
-	margin-left: 0px;
-	font-weight: bold;
-	text-align: center;
-}
-
-#hours, #min, #sec {
-	width: 40px;
-	height: 40px;
-	border-radius: 5px;
-	font-size: 28px;
-	margin-left: 0px;
-	font-weight: bold;
-	text-align: center;
-}
-#all-cache-p, #all-time-p {
-	color: #000;
-}
-#all-time {
-	margin-left: 0;
-}
-
-/******************************************************************************************* OPTIONS PAGE ***********************************************************************/ 
-
-#container_options {
-	width: 400px;
-	height: 226px;
-	margin-top: 20px;
-}
-
-.flags {
-	width: 100%;
-	border-bottom: 1px solid #aaa;
-	border-top: 1px solid #aaa;
-	margin-top: 10px;
-	margin-left: 4px;
-	text-align: center;
-}
-
-.flags img {
-	margin-top: 10px;
-	margin-bottom: 7px;
-	margin-right: 10px;
-}
-
-a {
-	text-decoration: none;
-}
-
-.fr {
-	margin-left: 17px;
-}
-
-.checkbox {
-	margin-top: 20px;
-}
-
-#checkbox_left {
-	float: left;
-	margin-right: 103px;
-	margin-left: 13px;
-}
-
-#checkbox_left p, .checkbox_right p {
-	display: inherit;
-}
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cache Cleaner</title>
+		<!--	 CSS -->
+		<link rel="stylesheet" href="static/css/style.css">
+		<script src="static/js/jquery.min.js"></script>
+		<script src="popup.js"></script>
+		<script src="static/js/our.js"></script>
+	</head>		
+	<body>
+        <div id="container">
+            <div id="options"> 
+                 <a href="#" >
+                    <img src="static/img/options.jpg" id="gearing-options">
+                </a>
+            </div>
+            <div class="submit_box">
+                <p id="title_name">Smart Cache Cleaner</p>
+            </div>
+             <form>
+                <div class="inputs_home">
+                    <div>
+                        <p>
+                            <label id="txt_days" for="txt_days">Jours</label><br />
+                            <input id="days" name="days" type="text" value="365" maxlength="3" max="365" min="000"/>
+                            <span id="span_days">Depuis combien de jours ?</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label id="txt_hours" for="txt_hours">Heures</label><br />
+                            <input id="hours" name="hours" type="text" value="24" maxlength="2" max="24" min="00"/>
+                            <span id="span_hours">Depuis combien d'heures ?</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label id="txt_min" for="txt_min">Minutes</label><br />
+                            <input id="min" name="min" type="text" value="60"  maxlength="2" max="60" min="00"/>
+                            <span id="span_min">Depuis combien de minutes ?</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label id="txt_sec" for="txt_sec">Secondes</label><br />
+                            <input id="sec" name="sec" type="text" value="60" maxlength="2" max="60" min="00"/>
+                            <span id="span_sec">Depuis combien de secondes ?</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="checkboxs_cache">
+                    <div>
+                         <label>
+                            <input id="all-cache" type="checkbox" name="all-cache" value="all-cache"> <span id="txt_all-cache">Tous types de caches</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="checkboxs_time">
+                    <div>
+                         <label>
+                            <input id="all-time" type="checkbox" name="all-time" value="all-time"> <span id="txt_all-time">Sans durée de temps</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="submit_box">
+                    <button  id="submit" type="button"><span id="txt_submit">Nettoyer</span></button>
+                </div>
+            </form>
+        </div>
+        <div id="container_options">
+            <div id="options">
+                <a href="#" >
+                    <img src="static/img/options.jpg" id="gearing-home">
+                </a>
+            </div>
+            <div class="submit_box">
+                <p id="title_name">Smart Cache Cleaner</p>
+            </div>
+            <div class="flags">
+                <img id="fr" src="static/img/flags/fr.jpg" />
+                <img id="en" src="static/img/flags/en.jpg" />
+                <img id="chi" src="static/img/flags/chi.jpg" />
+                <img id="por" src="static/img/flags/por.jpg" />
+                <img id="ger" src="static/img/flags/all.jpg" />
+                <img id="spa" src="static/img/flags/esp.jpg" />
+            </div>
+            <div class="checkbox">
+                <div id="checkbox_left">
+                    <label>
+                        <input id="cache" type="checkbox" name="cache" value="cache"><p id="txt_cache">Cache</p>
+                    </label>
+                    <br />
+                    <label>
+                        <input id="appcache" type="checkbox" name="appcache" value="appcache"><p id="txt_appcache">AppCache</p>
+                    </label>
+                    <br />
+                    <label>
+                        <input id="cookies" type="checkbox" name="cookies" value="cookies"><p id="txt_cookies">Cookies</p>
+                    </label>
+                    <br />
+                    <label>
+                        <input id="websql" type="checkbox" name="webSQL" value="websql"><p id="txt_websql">WebSQL</p>
+                    </label>
+                    <br />
+                    <label>
+                        <input id="indexdb" type="checkbox" name="indexedDB" value="indexedb"><p id="txt_indexdb">IndexDB</p>
+                    </label>
+                    <br />
+                    <label>
+                        <input id="formdata" type="checkbox" name="formData" value="formdata"><p id="txt_formdata">FormData</p>
+                    </label>
+                </div>
+                <div class="checkbox_right">
+                    <label>
+                        <input id="filesystems" type="checkbox" name="fileSystems" value="filesystems"><p id="txt_filesystems">FileSystems</p>
+                    </label>
+                    <br />
+                    <label>
+                        <input id="localstorage" type="checkbox" name="localStorage" value="localstorage"><p id="txt_localstorage">LocalStorage</p>
+                    </label>
+                    <br />
+                    <label>
+                        <input id="plugindata" type="checkbox" name="pluginData" value="plugindata"><p id="txt_plugindata">PluginData</p>
+                    </label>
+                    <br />
+                    <label>
+                        <input id="download" type="checkbox" name="downloads" value="download"><p id="txt_download">Download</p>
+                    </label>
+                    <br />
+                    <label>
+                        <input id="history" type="checkbox" name="history" value="history"><p id="txt_history">History</p>
+                    </label>
+                    <br />
+                    <label>
+                        <input id="passwords" type="checkbox" name="passwords" value="passwords"><p id="txt_passwords">Passwords</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
