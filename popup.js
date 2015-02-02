@@ -19,7 +19,48 @@ $('document').ready(function(){
 	}
 
 	// Cache la div dès que le DOM est prêt
-	$('#container_options').hide();
+	$('#container_options, #span_days, #span_hours, #span_min, #span_sec').hide();
+
+	// Affiche les span d'informations on:hover sur input 
+	$( '#days, #hours, #min, #sec' ).hover(
+  		function() {
+    		//$( this ).append( $( "<span> ***</span>" ) );
+    		var self = $(this);
+			var name = self.attr('name');
+
+    		if (  name == 'days'){
+			 	$('#span_days').show();
+		 	}
+			 else if ( name == 'hours'){
+			 	$('#span_hours').show();
+			 }
+			 else if ( name == 'min'){
+			 	$('#span_min').show();
+			 }
+			 else {
+			 	$('#span_sec').show();
+			 }
+  		}, 
+  		function() {
+    		//$( this ).find( "span:last" ).remove();
+    		$('#span_days').hide();
+    		var self = $(this);
+			var name = self.attr('name');
+
+    		if (  name == 'days'){
+			 	$('#span_days').hide();
+		 	}
+			 else if ( name == 'hours'){
+			 	$('#span_hours').hide();
+			 }
+			 else if ( name == 'min'){
+			 	$('#span_min').hide();
+			 }
+			 else {
+			 	$('#span_sec').hide();
+			 }
+  		}
+	);
 
 	// Effet de déplacement de la div
 	$('#gearing-options').click(function() {
