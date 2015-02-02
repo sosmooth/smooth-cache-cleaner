@@ -9,5 +9,9 @@
     "txt_passwords": "Mot de passes",
     "txt_plugindata": "Donnees des plugins",
     "txt_filesystems": "Fichier systeme",
-    "txt_formdata": "Donnees de formulaires"
+    "txt_formdata": "Donnees de formulaires",
+    "span_days": "Depuis combien de jours ?",
+    "span_hours": "Depuis combien d'heures ?",
+    "span_min": "Depuis combien de minutes ?",
+    "span_sec": "Depuis combien de secondes ?"
 }
