@@ -40,6 +40,12 @@ body {
 	width: 40px;
 	text-align: center;
 }
+#span_days, #span_hours, #span_min, #span_sec {
+	display: block;
+	width: 124px;
+	color: #fff;
+	background: #333;
+}
 .checkboxs_cache, .checkboxs_time, .submit_box {
 	width: 350px;
 	white-space: nowrap;
