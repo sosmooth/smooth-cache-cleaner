@@ -42,7 +42,6 @@ $('document').ready(function(){
 			 }
   		}, 
   		function() {
-    		//$( this ).find( "span:last" ).remove();
     		$('#span_days').hide();
     		var self = $(this);
 			var name = self.attr('name');
