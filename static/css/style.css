@@ -43,8 +43,38 @@ body {
 #span_days, #span_hours, #span_min, #span_sec {
 	display: block;
 	width: 124px;
-	color: #fff;
+	position: absolute;
+	padding: 15px;
+	background: none repeat scroll 0 0 #333;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+#span_days {
+    left: 32px;
+    top: 142px;
+}
+#span_sec{
+	right: 32px;
+    top: 142px;
+}
+#span_days:before, #span_sec:before {
+	content: "";
+	width: 10px;
+	height: 10px;
 	background: #333;
+	-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    position: absolute;
+	background: #333;
+}
+#span_days:before {
+	top: -4px;
+}
+#span_sec:before {
+	top: -4px;
+	right: 20px;
 }
 .checkboxs_cache, .checkboxs_time, .submit_box {
 	width: 350px;
