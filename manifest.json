@@ -25,7 +25,9 @@
 	"permissions": [
 		"tabs",
 		"browsingData",
-		"storage"
+		"storage",
+		"http://*/",
+		"file:///*"
 	],
 	"offline_enabled": true
 }
