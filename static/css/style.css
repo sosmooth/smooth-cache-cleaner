@@ -50,13 +50,14 @@ body {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     color: #fff;
 }
+#span_days, #span_hours, #span_min, #span_sec {
+	top: 142px
+}
 #span_days {
     left: 32px;
-    top: 142px;
 }
 #span_sec{
-	right: 32px;
-    top: 142px;
+	left: 166px;
 }
 #span_days:before, #span_sec:before {
 	content: "";
