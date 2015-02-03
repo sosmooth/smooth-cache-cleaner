@@ -56,10 +56,16 @@ body {
 #span_days {
     left: 32px;
 }
-#span_sec{
+#span_hours {
+    left: 64px;
+}
+#span_min {
+	left: 138px;
+}
+#span_sec {
 	left: 166px;
 }
-#span_days:before, #span_sec:before {
+#span_days:before, #span_hours:before, #span_min:before, #span_sec:before {
 	content: "";
 	width: 10px;
 	height: 10px;
@@ -68,10 +74,17 @@ body {
     -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
     transform: rotate(45deg);
     position: absolute;
-	background: #333;
 }
 #span_days:before {
 	top: -4px;
+}
+#span_hours:before {
+	top: -4px;
+	left: 68px;
+}
+#span_min:before {
+	top: -4px;
+	right: 70px;
 }
 #span_sec:before {
 	top: -4px;
