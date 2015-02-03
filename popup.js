@@ -98,13 +98,8 @@ $('document').ready(function(){
 		Fill input when user select another input
 	*/ 
 	$('#days, #hours, #min, #sec').change(function(){
-		var self = $(this);
-		var val = self.val();
-		var name = self.prop('name');
-		var min = self.attr('min');
-
-		if ( val === '' )
-			self.val(min);
+		if ( $(this).val() === '' )
+			$(this).val($(this).attr('max'));
 	})
 
 	/*
@@ -116,8 +111,9 @@ $('document').ready(function(){
 			$('#hours, #min, #sec').val('##');
 		}
 		else{
-			$('#days').val('000');
-			$('#hours, #min, #sec').val('00');
+			$('#days, #hours, #min, #sec').each(function(){
+				$(this).val($(this).attr('max'));
+			})
 		}
 	})
 
@@ -194,8 +190,7 @@ $('document').ready(function(){
 		var self = $(this);
 		var id = self.attr('id');
 		var path = '_locales/'+id+'/translation.json'
-		json_data = $.getJSON(path, function(data){
-			console.log(data);
+		$.getJSON(path, function(data){
 			$.each(data, function(key, val){
 				$('#'+key).text(val);
 			})
