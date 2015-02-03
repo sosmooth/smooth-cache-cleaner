@@ -189,7 +189,7 @@ $('document').ready(function(){
 	$("#fr, #en, #chi, #por, #ger, #spa").click(function(){
 		var self = $(this);
 		var id = self.attr('id');
-		var path = '_locales/'+id+'/translation.json'
+		var path = '../_locales/'+id+'/translation.json'
 		$.getJSON(path, function(data){
 			$.each(data, function(key, val){
 				$('#'+key).text(val);

@@ -14,12 +14,12 @@
 	},
 	"browser_action": {
 		"default_title": "Cache Cleaner",
-		"default_popup": "popup.html",
+		"default_popup": "views/popup.html",
 		"default_icon": "static/img/icon.png"
 	},
 	"background": {
-		"scripts": ["background.js"],
-		"persistant": false
+		"scripts": ["controllers/background.js"],
+		"persistant": true
 	},
 	// "options_page": "options.html",
 	"permissions": [
