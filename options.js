@@ -1,46 +1,64 @@
 $('document').ready(function(){
-	var options = {};
-	getUserPreferences(options);
-	$('#submit').click(function(){
-		
+	
+	var caches_list = {}
+	$('.checkbox input').each(function(){
+		var self = $(this);
+		var name = self.attr('name');
+		if( name !== 'all-cache'){
+			caches_list[name] = false ;
+		}
+	});
+
+	console.log(caches_list);
+
+
+
+	/*
+		Save Options
+	*/ 
+	function save_options(){
+		/*
+			Gets all caches checked and insert them into a array.
+			That array represents all the caches to be cleaned
+		*/
+
 		$('.checkbox input').each(function(){
 			var self = $(this);
 			var name = self.attr('name');
-			if(self.is(':checked')){ //If options checked
-				options[name] = true;
+			if( name !== 'all-cache'){
+				if(self.is(':checked'))
+					caches_list[name] = true ;
+				else
+					caches_list[name] = false ;
 			}
-			else{
-				options[name] = false;
+		});
+
+		// Saving preferences 
+		chrome.storage.sync.set(
+			caches_list,
+			function(){
+				setTimeout(function(){
+					alert('Preferences saved !');
+				}, 500); // Wait 1/2 second
 			}
-			setUserPreferences(options);
-		})
-	})
-
-	/*
-		Load user preferences when on option page
-	*/ 
-	function loadUserPreferences(){
-		options = getUserPreferences();
+		);
 	}
 
 	/*
-		Save user preferences
+		Restore options
 	*/ 
-	function setUserPreferences(options){
-		chrome.storage.sync.set(options, function(){ 
-			// Maybe send a signal or something
-			console.log('saved');
-		});
+	function restore_options(){
+		chrome.storage.sync.get(
+			caches_list,
+			function(items){
+				cache_options = items ; // getting options
+				console.log(cache_options);
+			}
+		);
 	}
 
 	/*
-		Get user preferences
+		On click => save options
 	*/ 
-	function getUserPreferences(){
-		chrome.storage.sync.get(function(items){
-			// Do something with those items i.e items.cache
-			console.log(items);
-			return items;
-		});
-	}
+	$('#save').click(save_options)
 })

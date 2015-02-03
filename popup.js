@@ -197,6 +197,9 @@ $('document').ready(function(){
 		});
 	})
 
+	/*
+		Cleaning action
+	*/ 
 	$('#submit').click(function(){
 
 		/*
@@ -211,12 +214,12 @@ $('document').ready(function(){
 		
 		console.log("clear since : "+total_time);
 
-		var caches_list = {}
-
 		/*
 			Gets all caches checked and insert them into a array.
 			That array represents all the caches to be cleaned
 		*/
+		var caches_list = {}
+
 		$('.checkbox input').each(function(){
 			var self = $(this);
 			var name = self.attr('name');
@@ -226,7 +229,7 @@ $('document').ready(function(){
 				else
 					caches_list[name] = false ;
 			}
-		})
+		});
 
 		console.log(caches_list);
 		console.log(total_time);
