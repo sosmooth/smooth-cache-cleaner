@@ -179,8 +179,7 @@ a {
 
 #checkbox_left {
 	float: left;
-	margin-right: 103px;
-	margin-left: 13px;
+	width: 50%;
 }
 
 #checkbox_left p, .checkbox_right p {
