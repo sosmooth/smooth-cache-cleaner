@@ -1,5 +1,8 @@
 $('document').ready(function(){
 
+	////////////////////////////////////////////////////////////////////////////////
+	////						Non Event Functions
+	///////////////////////////////////////////////////////////////////////////////
 	/*
 		Convert a value to millisecond according to the type passed
 	*/
@@ -17,6 +20,23 @@ $('document').ready(function(){
 			return 1000 * value ;
 		}
 	}
+
+	/*
+		Translate page according to the selected language
+	*/ 
+	function translate(id){
+		var path = '../_locales/'+id+'/translation.json'
+		$.getJSON(path, function(data){
+			$.each(data, function(key, val){
+				$('#'+key).text(val);
+			})
+		});
+	}
+
+	// Function Everywhere
+	window.translate = translate ;
+	window.convert_to_milliseconds = convert_to_milliseconds ;
+	///////////////////////////////////////////////////////////////////////////////
 
 	// Cache la div dès que le DOM est prêt
 	$('#container_options, #span_days, #span_hours, #span_min, #span_sec').hide();
@@ -189,12 +209,8 @@ $('document').ready(function(){
 	$("#fr, #en, #chi, #por, #ger, #spa").click(function(){
 		var self = $(this);
 		var id = self.attr('id');
-		var path = '../_locales/'+id+'/translation.json'
-		$.getJSON(path, function(data){
-			$.each(data, function(key, val){
-				$('#'+key).text(val);
-			})
-		});
+		translate(id);
+		caches_list['lang'] = id ;
 	})
 
 	/*

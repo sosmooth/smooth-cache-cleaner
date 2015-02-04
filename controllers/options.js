@@ -1,6 +1,7 @@
 $('document').ready(function(){
 	
-	var caches_list = {}
+	caches_list = {};
+
 	$('.checkbox input').each(function(){
 		var self = $(this);
 		var name = self.attr('name');
@@ -9,18 +10,20 @@ $('document').ready(function(){
 		}
 	});
 
-	console.log(caches_list);
-
-
+	/*
+		Restoring User Options
+	*/ 
+	restore_options();
 
 	/*
-		Save Options
+		Save Options function
 	*/ 
 	function save_options(){
 		/*
 			Gets all caches checked and insert them into a array.
 			That array represents all the caches to be cleaned
 		*/
+		console.log('Saving options');
 
 		$('.checkbox input').each(function(){
 			var self = $(this);
@@ -32,7 +35,7 @@ $('document').ready(function(){
 					caches_list[name] = false ;
 			}
 		});
-
+		console.log(caches_list);
 		// Saving preferences 
 		chrome.storage.sync.set(
 			caches_list,
@@ -45,7 +48,7 @@ $('document').ready(function(){
 	}
 
 	/*
-		Restore options
+		Restore options function
 	*/ 
 	function restore_options(){
 		chrome.storage.sync.get(
@@ -53,6 +56,15 @@ $('document').ready(function(){
 			function(items){
 				cache_options = items ; // getting options
 				console.log(cache_options);
+				$.each(cache_options, function(key, value){
+					// Restoring language 
+					if (key === 'lang'){
+						translate(value);
+					}
+					else{
+						$('#'+key).prop('checked', value == true ? true : false);
+					}
+				});
 			}
 		);
 	}
