@@ -127,8 +127,8 @@ $('document').ready(function(){
 	*/ 
 	$('#all-time').change(function(){
 		if ($(this).is(":checked")){
-			$('#days').val('###');
-			$('#hours, #min, #sec').val('##');
+			$('#days').val('¤¤¤');
+			$('#hours, #min, #sec').val('¤¤');
 		}
 		else{
 			$('#days, #hours, #min, #sec').each(function(){
