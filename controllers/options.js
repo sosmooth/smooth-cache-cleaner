@@ -9,6 +9,7 @@ $('document').ready(function(){
 			caches_list[name] = false ;
 		}
 	});
+	caches_list['lang'] = ''; 
 
 	/*
 		Restoring User Options
@@ -58,7 +59,7 @@ $('document').ready(function(){
 				console.log(cache_options);
 				$.each(cache_options, function(key, value){
 					// Restoring language 
-					if (key === 'lang'){
+					if (key === 'lang' && value !== ''){
 						translate(value);
 					}
 					else{
