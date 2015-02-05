@@ -13,14 +13,33 @@ body {
 
 /********************************************************************************************** MAIN PAGE ***********************************************************************/ 
 
-#options img {
-	position: absolute;
-	top: 2px;
-	right: 2px;
+#options, #help {
+	float: right;
+	width: 50px;
+	text-align: center;
+}
+
+
+#options a, #help a {
+	color: #333;
+	height: 40px;
+}
+
+a:hover span + span  {
+	text-decoration: underline;
+}
+
+#options {
+	margin: 0 10px;
+}
+
+.icon-cog, .icon-help {
+	position: relative;
+	top: -5px;
 }
 .submit_box p {
 	font-weight: 700;
-	color: #000;
+	color: #333;
 }
 .inputs_home {
 	width: 350px;
@@ -99,8 +118,7 @@ body {
 	margin: auto;
 	margin-top: 20px;
 }
-#submit {
-	background-color:#da534f;
+#submit, #save {
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	border-radius:3px;
@@ -113,8 +131,17 @@ body {
 	text-decoration:none;
 	border: none;
 }
+#submit {
+	background:#da534f;
+}
 #submit:hover {
-	background-color:#eb5b57;
+	background:#eb5b57;
+}
+#save {
+	background:#52da4f;
+}
+#save:hover {
+	background:#5df259;
 }
 #days {
 	width: 60px;
@@ -136,7 +163,7 @@ body {
 	text-align: center;
 }
 #all-cache-p, #all-time-p {
-	color: #000;
+	color: #333;
 }
 #all-time {
 	margin-left: 0;
