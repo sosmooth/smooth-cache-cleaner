@@ -8,16 +8,16 @@ $('document').ready(function(){
 	*/
 	function convert_to_milliseconds(value, type){
 		if (type === 'days') {
-			return 1000 * 60 * 60 * 24 * value ;
+			return typeof(value) !== "string" ? 1000 * 60 * 60 * 24 * value : 0 ;
 		}
 		else if (type === 'hours'){
-			return 1000 * 60 * 60 * value ;
+			return typeof(value) !== "string" ? 1000 * 60 * 60 * value : 0 ;
 		}
 		else if (type === 'min'){
-			return 1000 * 60 * value ;
+			return typeof(value) !== "string" ? 1000 * 60 * value : 0;
 		}
 		else{
-			return 1000 * value ;
+			return typeof(value) !== "string" ? 1000 * value : 0 ;
 		}
 	}
 
