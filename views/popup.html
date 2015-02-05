@@ -4,6 +4,7 @@
 		<title>Cache Cleaner</title>
 		<!--	 CSS -->
 		<link rel="stylesheet" href="../static/css/style.css">
+        <link rel="stylesheet" href="../static/fonts/style.css">
 		<script src="../static/js/jquery.min.js"></script>
         <script src="../controllers/popup.js"></script>
 		<script src="../controllers/options.js"></script>
@@ -12,8 +13,15 @@
 	<body>
         <div id="container">
             <div id="options"> 
-                 <a href="#" >
-                    <img src="../static/img/options.jpg" id="gearing-options">
+                 <a id="gearing-options" href="#" >
+                    <span class="icon-cog"></span>
+                    <span class="txt_options">Options</span>
+                </a>
+            </div>
+            <div id="help"> 
+                 <a id="help-options" href="#" >
+                    <span class="icon-help"></span>
+                    <span class="txt_help">Aide</span>
                 </a>
             </div>
             <div class="submit_box">
@@ -70,9 +78,10 @@
             </form>
         </div>
         <div id="container_options">
-            <div id="options">
-                <a href="#" >
-                    <img src="../static/img/options.jpg" id="gearing-home">
+            <div id="options"> 
+                 <a id="gearing-home" href="#" >
+                    <span class="icon-cog"></span>
+                    <span class="txt_options">Options</span>
                 </a>
             </div>
             <div class="submit_box">
