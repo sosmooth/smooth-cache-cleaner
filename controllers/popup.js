@@ -210,7 +210,7 @@ $('document').ready(function(){
 		var self = $(this);
 		var id = self.attr('id');
 		translate(id);
-		caches_list['lang'] = id ;
+		caches_pref['lang'] = id ;
 	})
 
 	/*
@@ -236,16 +236,15 @@ $('document').ready(function(){
 		*/
 		var caches_list = {}
 
+		// Fetch all caches and their status
 		$('.checkbox input').each(function(){
 			var self = $(this);
 			var name = self.attr('name');
 			if( name !== 'all-cache'){
-				if(self.is(':checked'))
-					caches_list[name] = true ;
-				else
-					caches_list[name] = false ;
+				caches_list[name] = self.is(':checked') ? true : false ;
 			}
 		});
+		
 
 		console.log(caches_list);
 		console.log(total_time);
