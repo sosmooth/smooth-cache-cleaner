@@ -1,15 +1,15 @@
 $('document').ready(function(){
 	
-	caches_list = {};
+	caches_pref = {};
 
 	$('.checkbox input').each(function(){
 		var self = $(this);
 		var name = self.attr('name');
 		if( name !== 'all-cache'){
-			caches_list[name] = false ;
+			caches_pref[name] = false ;
 		}
 	});
-	caches_list['lang'] = ''; 
+	caches_pref['lang'] = ''; 
 
 	/*
 		Restoring User Options
@@ -30,16 +30,13 @@ $('document').ready(function(){
 			var self = $(this);
 			var name = self.attr('name');
 			if( name !== 'all-cache'){
-				if(self.is(':checked'))
-					caches_list[name] = true ;
-				else
-					caches_list[name] = false ;
+				caches_pref[name] = self.is(':checked') ? true : false ;
 			}
 		});
-		console.log(caches_list);
+		console.log(caches_pref);
 		// Saving preferences 
 		chrome.storage.sync.set(
-			caches_list,
+			caches_pref,
 			function(){
 				setTimeout(function(){
 					alert('Preferences saved !');
@@ -53,7 +50,7 @@ $('document').ready(function(){
 	*/ 
 	function restore_options(){
 		chrome.storage.sync.get(
-			caches_list,
+			caches_pref,
 			function(items){
 				cache_options = items ; // getting options
 				console.log(cache_options);
