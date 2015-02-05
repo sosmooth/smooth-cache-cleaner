@@ -187,9 +187,21 @@ a:hover span + span  {
 }
 
 .flags img {
+	height: 30px;
+	width: 49px;
 	margin-top: 10px;
 	margin-bottom: 7px;
 	margin-right: 10px;
+}
+
+.flags img:hover {
+	 -webkit-transition: all 0.3s ease;
+	-webkit-transform: rotate(360deg);
+	height: 30px;
+	width: 49px;
+	opacity: 0.4 ;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px 2px ;
 }
 
 a {
