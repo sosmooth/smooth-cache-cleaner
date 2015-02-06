@@ -19,10 +19,12 @@ body {
 	text-align: center;
 }
 
-
 #options a, #help a {
 	color: #333;
 	height: 40px;
+}
+.txt_options {
+	font-size: 12px;
 }
 
 a:hover span + span  {
@@ -139,6 +141,7 @@ a:hover span + span  {
 }
 #save {
 	background:#52da4f;
+	margin-bottom: 20px;
 }
 #save:hover {
 	background:#5df259;
@@ -172,12 +175,27 @@ a:hover span + span  {
 /******************************************************************************************* OPTIONS PAGE ***********************************************************************/ 
 
 #container_options {
-	width: 400px;
+	width: 450px;
 	height: 226px;
 	margin-top: 20px;
 }
 
+.flag-box, .flag-box-a{
+	height: 40px;
+	width: 59px;
+	float: left;
+}
+.flag-box {
+	margin: 10px 8px;
+}
+.flag-box-a {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 3px;
+	margin-right: 10px;
+}
 .flags {
+	height: 50px;
 	width: 100%;
 	border-bottom: 1px solid #aaa;
 	border-top: 1px solid #aaa;
@@ -187,21 +205,21 @@ a:hover span + span  {
 }
 
 .flags img {
-	height: 30px;
-	width: 49px;
-	margin-top: 10px;
-	margin-bottom: 7px;
-	margin-right: 10px;
+	opacity: 0.7 ;
+    height: 30px;
+    width: 49px;
+  	-webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    transition: all 0.1s ease;
 }
 
 .flags img:hover {
-	 -webkit-transition: all 0.3s ease;
-	-webkit-transform: rotate(360deg);
-	height: 30px;
-	width: 49px;
-	opacity: 0.4 ;
-	border-radius: 5px;
-	box-shadow: 2px 2px 2px 2px ;
+    height: 33px;
+    width: 55px;
+    opacity: 1 ;
+    box-shadow: 2px 2px 2px 2px ;
 }
 
 a {
@@ -219,6 +237,7 @@ a {
 #checkbox_left {
 	float: left;
 	width: 50%;
+	margin-left: 5%;
 }
 
 #checkbox_left p, .checkbox_right p {
