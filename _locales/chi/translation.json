@@ -20,5 +20,7 @@
     "span_days": "For how many days ?",
     "span_hours": "For how many hours ?",
     "span_min": "For how many min ?",
-    "span_sec": "For how many secs ?"
+    "span_sec": "For how many secs ?",
+    "txt_save": "保存",
+    "txt_help": "帮助"
 }
