@@ -27,6 +27,7 @@
 		"browsingData",
 		"storage",
 		"http://*/",
+		"https://*/",
 		"file:///*"
 	],
 	"offline_enabled": true

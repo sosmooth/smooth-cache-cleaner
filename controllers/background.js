@@ -18,7 +18,6 @@ function get_elapsed_time(period){
 function clearCache(period, options){
 	console.log(period);
     elapsed_time = parseInt(get_elapsed_time(period));
-    console.log(elapsed_time);
     console.log(options);
     // Cleaning the cache
     chrome.browsingData.remove(

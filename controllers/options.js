@@ -53,7 +53,6 @@ $('document').ready(function(){
 			caches_pref,
 			function(items){
 				cache_options = items ; // getting options
-				console.log(cache_options);
 				$.each(cache_options, function(key, value){
 					// Restoring language 
 					if (key === 'lang' && value !== ''){
