@@ -7,6 +7,7 @@ $('document').ready(function(){
 		Convert a value to millisecond according to the type passed
 	*/
 	function convert_to_milliseconds(value, type){
+		value = parseInt(value);
 		if (type === 'days') {
 			return typeof(value) !== "string" ? 1000 * 60 * 60 * 24 * value : 0 ;
 		}
@@ -221,7 +222,7 @@ $('document').ready(function(){
 		/*
 			Converts every inputs in milliseconds
 		*/
-		var total_time = 0
+		total_time = 0 ;
 
 		$('.inputs_home input').each(function(){
 			self = $(this);

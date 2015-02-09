@@ -16,9 +16,10 @@ function get_elapsed_time(period){
 	Clear the cache according to the specified period
 */ 
 function clearCache(period, options){
-	console.log(period);
+    console.log(period);
     elapsed_time = parseInt(get_elapsed_time(period));
-    console.log(options);
+    console.log(elapsed_time);
+    console.lgo()
     // Cleaning the cache
     chrome.browsingData.remove(
         {"since": elapsed_time}, 
@@ -27,7 +28,7 @@ function clearCache(period, options){
  	);
 
  	/*Message sender*/
- 	// send <removeCache> return value to popup.js
+ 	// send clearCache> return value to popup.js
  	chrome.extension.sendMessage(
  		{response: {'cache_clean': true}},
  		function(response){	
