@@ -7,18 +7,18 @@ $('document').ready(function(){
 		Convert a value to millisecond according to the type passed
 	*/
 	function convert_to_milliseconds(value, type){
-		value = parseInt(value);
+		// value = parseInt(value);
 		if (type === 'days') {
-			return typeof(value) !== "string" ? 1000 * 60 * 60 * 24 * value : 0 ;
+			return !isNaN(parseInt(value)) ? 1000 * 60 * 60 * 24 * value : 0 ;
 		}
 		else if (type === 'hours'){
-			return typeof(value) !== "string" ? 1000 * 60 * 60 * value : 0 ;
+			return !isNaN(parseInt(value)) ? 1000 * 60 * 60 * value : 0 ;
 		}
 		else if (type === 'min'){
-			return typeof(value) !== "string" ? 1000 * 60 * value : 0;
+			return !isNaN(parseInt(value)) ? 1000 * 60 * value : 0;
 		}
 		else{
-			return typeof(value) !== "string" ? 1000 * value : 0 ;
+			return !isNaN(parseInt(value)) ? 1000 * value : 0 ;
 		}
 	}
 

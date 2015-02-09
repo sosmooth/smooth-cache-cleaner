@@ -9,7 +9,7 @@ var callback = function notify(){
 	Get lapse time from now() according to the time passed
 */ 
 function get_elapsed_time(period){
-	return (new Date()).getTime() - period ; 
+	return period !== 0 ? (new Date()).getTime() - period : 0 ; 
 }
 
 /*
@@ -19,7 +19,6 @@ function clearCache(period, options){
     console.log(period);
     elapsed_time = parseInt(get_elapsed_time(period));
     console.log(elapsed_time);
-    console.lgo()
     // Cleaning the cache
     chrome.browsingData.remove(
         {"since": elapsed_time}, 
