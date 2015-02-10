@@ -1,18 +1,18 @@
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Cache Cleaner</title>
-		<!--	 CSS -->
-		<link rel="stylesheet" href="../static/css/style.css">
+    <head>
+        <meta charset="utf-8">
+        <title>Cache Cleaner</title>
+        <!--     CSS -->
+        <link rel="stylesheet" href="../static/css/style.css">
         <link rel="stylesheet" href="../static/fonts/style.css">
-		<script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/jquery.min.js"></script>
         <script src="../controllers/popup.js"></script>
-		<script src="../controllers/options.js"></script>
-		<script src="../static/js/our.js"></script>
-	</head>		
-	<body>
+        <script src="../controllers/options.js"></script>
+        <script src="../static/js/our.js"></script>
+    </head>     
+    <body>
         <div id="container">
-            <div class="submit_box">
+            <div class="top_box">
                 <div id="options"> 
                      <a id="gearing-options" href="#" >
                         <span class="icon-cog"></span>
@@ -26,7 +26,7 @@
                     </a>
                 </div>
             </div>
-            <div class="submit_box">
+            <div class="title_box">
                 <p id="title_name">Smart Cache Cleaner</p>
             </div>
              <form>
@@ -80,22 +80,36 @@
             </form>
         </div>
         <div id="container_options">
-            <div id="options"> 
-                 <a id="gearing-home" href="#" >
-                    <span class="icon-cog"></span>
-                    <span class="txt_options">Options</span>
-                </a>
+            <div class="top_box-home">
+                <div id="home"> 
+                     <a id="gearing-home" href="#" >
+                        <span class="icon-cog"></span>
+                        <span class="txt_options">Options</span>
+                    </a>
+                </div>
             </div>
-            <div class="submit_box">
+            <div class="title_box">
                 <p id="title_name">Smart Cache Cleaner</p>
             </div>
             <div class="flags">
-                <img id="fr" src="../static/img/flags/fr.jpg" />
-                <img id="en" src="../static/img/flags/en.jpg" />
-                <img id="chi" src="../static/img/flags/chi.jpg" />
-                <img id="por" src="../static/img/flags/por.jpg" />
-                <img id="ger" src="../static/img/flags/all.jpg" />
-                <img id="spa" src="../static/img/flags/esp.jpg" />
+                <div class="flag-box-a">
+                    <img id="fr" src="../static/img/flags/fr.jpg" />
+                </div>
+                <div class="flag-box">
+                    <img id="en" src="../static/img/flags/en.jpg" />
+                </div>
+                <div class="flag-box">
+                    <img id="chi" src="../static/img/flags/chi.jpg" />
+                </div>
+                <div class="flag-box">
+                    <img id="por" src="../static/img/flags/por.jpg" />
+                </div>
+                <div class="flag-box">
+                    <img id="ger" src="../static/img/flags/all.jpg" />
+                </div>
+                <div class="flag-box">
+                    <img id="spa" src="../static/img/flags/esp.jpg" />
+                </div>
             </div>
             <div class="checkbox">
                 <div id="checkbox_left">
@@ -149,9 +163,9 @@
                     </label>
                 </div>
             </div>
-            <div class="submit_box">
+            <div class="save_box">
                 <button  id="save" type="button"><span id="txt_save">Sauvegarder</span></button>
             </div>
         </div>
-	</body>
+    </body>
 </html>
