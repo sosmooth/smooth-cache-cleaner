@@ -13,29 +13,30 @@ body {
 
 /********************************************************************************************** MAIN PAGE ***********************************************************************/ 
 
-#options, #help {
-	width: 50px;
+#options, #help, #home {
 	float: right;
 	text-align: center;
 }
 
-
-#options a, #help a {
+#options a, #help a, #home a{
 	color: #333;
+	width: 100%;
 	height: 40px;
 }
-
+.txt_options, .txt_help {
+	font-size: 12px;
+}
+.icon-cog, .icon-help {
+	position: relative;
+	top: -16px;
+	left: 50%;
+}
 a:hover span + span  {
 	text-decoration: underline;
 }
 
-#options {
-	margin: 0 10px;
-}
-
-.icon-cog, .icon-help {
-	position: relative;
-	top: -5px;
+#options, #home {
+	margin-right: 12px;
 }
 .submit_box p {
 	font-weight: 700;
@@ -109,15 +110,44 @@ a:hover span + span  {
 	top: -4px;
 	right: 20px;
 }
-.checkboxs_cache, .checkboxs_time, .submit_box {
+.checkboxs_cache, .checkboxs_time {
+	width: 350px; 
+	height: 20px;
+	white-space: nowrap;
+	margin-left: 28%;
+}
+.submit_box, .title_box {
 	width: 350px;
+	height: 20px;
+	margin: auto;
 	white-space: nowrap;
 	text-align: center;
 }
+.title_box {
+	font-weight: 700;
+	color: #333;
+}
 .submit_box {
+	margin-top: 20px;
+}
+.top_box {
+	width: 350px;
+	height: 20px;
 	margin: auto;
 	margin-top: 20px;
+	white-space: nowrap;
+	text-align: center;
+}
+.top_box-home, .save_box {
+	width: 450px;
 	height: 20px;
+	margin: auto;
+	margin-top: 20px;
+	white-space: nowrap;
+	text-align: center;
+}
+.save_box {
+	margin-bottom: 25px;
 }
 #submit, #save {
 	-moz-border-radius:3px;
@@ -140,6 +170,7 @@ a:hover span + span  {
 }
 #save {
 	background:#52da4f;
+	margin-bottom: 20px;
 }
 #save:hover {
 	background:#5df259;
@@ -167,18 +198,33 @@ a:hover span + span  {
 	color: #333;
 }
 #all-time {
-	margin-left: 0;
+	margin-left: 1%;
 }
 
 /******************************************************************************************* OPTIONS PAGE ***********************************************************************/ 
 
 #container_options {
-	width: 400px;
+	width: 450px;
 	height: 226px;
 	margin-top: 20px;
 }
 
+.flag-box, .flag-box-a{
+	height: 40px;
+	width: 59px;
+	float: left;
+}
+.flag-box {
+	margin: 10px 8px;
+}
+.flag-box-a {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 3px;
+	margin-right: 10px;
+}
 .flags {
+	height: 50px;
 	width: 100%;
 	border-bottom: 1px solid #aaa;
 	border-top: 1px solid #aaa;
@@ -188,9 +234,21 @@ a:hover span + span  {
 }
 
 .flags img {
-	margin-top: 10px;
-	margin-bottom: 7px;
-	margin-right: 10px;
+	opacity: 0.7 ;
+    height: 30px;
+    width: 49px;
+  	-webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+}
+
+.flags img:hover {
+    height: 33px;
+    width: 55px;
+    opacity: 1 ;
+    box-shadow: 2px 2px 2px 2px ;
 }
 
 a {
@@ -208,6 +266,7 @@ a {
 #checkbox_left {
 	float: left;
 	width: 50%;
+	margin-left: 5%;
 }
 
 #checkbox_left p, .checkbox_right p {
