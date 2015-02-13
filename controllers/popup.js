@@ -207,7 +207,7 @@ $('document').ready(function(){
 	/*
 		Translation hanlder
 	*/ 
-	$("#fr, #en, #chi, #por, #ger, #spa").click(function(){
+	$(".flag-box img").click(function(){
 		var self = $(this);
 		var id = self.attr('id');
 		translate(id);
