@@ -1,0 +1,17 @@
+{
+    "txt_days": "أيام",
+    "txt_hours": "ساعات",
+    "txt_min": "دقائق",
+    "txt_sec": "ثواني",
+    "txt_all-cache": "جميع مختزن المتصفح",
+    "txt_all-time": "منذ البداية",
+    "txt_submit":  "تنظيف",
+    "txt_cache": "مختزن المتصفح",
+    "txt_appcache": "مختزن التطبيقات",
+    "txt_cookies": "ملفات تعريف الارتباط",
+    "txt_websql": "WebSQL",
+    "txt_indexdb": "IndexedDB",
+    "txt_formdata": "بيانات النموذج",
+    "txt_filesystems": "ملف النظام",
+    "txt_localstorage": "التخزين المحلي"
+}
