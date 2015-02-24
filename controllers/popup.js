@@ -35,6 +35,12 @@ $('document').ready(function(){
 					var p = $(this).find('p');
 					var cp = p ;
 					p.remove();
+
+					// Adding css properties
+					// float: left;
+					// width: 45%;
+					// margin-right: 12%;
+					// text-align: right;
 					input.before(cp);
 				})
 			}
