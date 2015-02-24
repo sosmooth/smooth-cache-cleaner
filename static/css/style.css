@@ -204,7 +204,7 @@ a:hover span + span  {
 /******************************************************************************************* OPTIONS PAGE ***********************************************************************/ 
 
 #container_options {
-	width: 450px;
+	width: 490px;
 	height: 226px;
 	margin-top: 20px;
 }
@@ -215,7 +215,7 @@ a:hover span + span  {
 	float: left;
 }
 .flag-box {
-	margin: 10px 8px;
+	margin: 10px 5px;
 }
 .flag-box-a {
 	margin-top: 10px;
@@ -265,8 +265,8 @@ a {
 
 #checkbox_left {
 	float: left;
-	width: 50%;
-	margin-left: 5%;
+	width: 45%;
+	margin-left: 12%;
 }
 
 #checkbox_left p, .checkbox_right p {

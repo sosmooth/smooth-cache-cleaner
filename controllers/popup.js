@@ -43,7 +43,8 @@ $('document').ready(function(){
 					var self = $(this);
 					var input = $(this).find('input');
 					var p = $(this).find('p');
-					if ( ! p.index() > input.index() ){
+				
+					if (  p.index() < input.index() ){
 						var cp = p ;
 						p.remove();
 						input.after(cp);
