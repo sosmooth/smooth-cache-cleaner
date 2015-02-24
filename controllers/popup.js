@@ -28,6 +28,28 @@ $('document').ready(function(){
 	function translate(id){
 		var path = '../_locales/'+id+'/translation.json'
 		$.getJSON(path, function(data){
+			if ( id == 'ara'){
+				$('.checkbox label').each(function(){
+					var self = $(this);
+					var input = $(this).find('input');
+					var p = $(this).find('p');
+					var cp = p ;
+					p.remove();
+					input.before(cp);
+				})
+			}
+			else {
+				$('.checkbox label').each(function(){
+					var self = $(this);
+					var input = $(this).find('input');
+					var p = $(this).find('p');
+					if ( ! p.index() > input.index() ){
+						var cp = p ;
+						p.remove();
+						input.after(cp);
+					}
+				})
+			}
 			$.each(data, function(key, val){
 				$('#'+key).text(val);
 			})
