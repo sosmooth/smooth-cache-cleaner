@@ -129,10 +129,10 @@ $('document').ready(function(){
 	*/
 	$('#days, #hours, #min, #sec').keyup(function(){
 		var self = $(this);		// var val = parseInt(self.val());
-		var val = self.val();
+		var val = parseInt(self.val());
 		var name = self.prop('name');
-		var max = self.attr('max');
-		var min = self.attr('min');
+		var max = parseInt(self.attr('max'));
+		var min = parseInt(self.attr('min'));
 
 		if ( isNaN(val)){
 			self.val(min);
