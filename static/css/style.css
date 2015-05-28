@@ -35,7 +35,7 @@ a:hover span + span  {
 	text-decoration: underline;
 }
 
-#options, #home {
+#options {
 	margin-right: 12px;
 }
 .submit_box p {
@@ -60,6 +60,11 @@ a:hover span + span  {
 	width: 40px;
 	text-align: center;
 }
+/*.inputs_home input:nth-child(6) {
+	position: relative;
+	margin-left: 8px;
+	right: 5px;
+}*/
 #span_days, #span_hours, #span_min, #span_sec {
 	display: block;
 	width: 124px;

@@ -33,16 +33,19 @@ $('document').ready(function(){
 					var self = $(this);
 					var input = $(this).find('input');
 					var p = $(this).find('p');
-					var cp = p ;
+					var copy_p = p ;
 					p.remove();
+					
+					input.before(copy_p);
 
-					// Adding css properties
-					// float: left;
-					// width: 45%;
-					// margin-right: 12%;
-					// text-align: right;
-					input.before(cp);
 				})
+
+				$('.checkbox').css({"text-align":"right"});
+				$('#checkbox_left').css({"margin-left": "0"});
+				$('.checkbox_right').css({"margin-right":"12%"});
+
+				$('#formdata').css({"position":"relative","right":"5px","margin-left":"8px"});
+				$('#passwords').css({"position":"relative","right":"4px","margin-left":"8px"});
 			}
 			else {
 				$('.checkbox label').each(function(){
@@ -56,6 +59,14 @@ $('document').ready(function(){
 						input.after(cp);
 					}
 				})
+
+				$('.checkbox').css({"text-align":""});
+				$('#checkbox_left').css({"margin-left": "12%"});
+				$('.checkbox_right').css({"margin-right":"0"});
+
+				$('#txt_formdata').css({"position":"relative","right":"4px"});
+				$('#txt_passwords').css({"position":"relative","right":"4px"});
+
 			}
 			$.each(data, function(key, val){
 				$('#'+key).text(val);
