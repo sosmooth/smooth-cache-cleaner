@@ -35,7 +35,7 @@ a:hover span + span  {
 	text-decoration: underline;
 }
 
-#options {
+#options: {
 	margin-right: 12px;
 }
 .submit_box p {
@@ -116,10 +116,11 @@ a:hover span + span  {
 	right: 20px;
 }
 .checkboxs_cache, .checkboxs_time {
-	width: 350px; 
-	height: 20px;
-	white-space: nowrap;
-	margin-left: 28%;
+	width: 350px;
+  	height: 20px;
+  	white-space: nowrap;
+	margin: auto;
+	text-align: center;
 }
 .submit_box, .title_box {
 	width: 350px;
