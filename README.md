@@ -16,6 +16,7 @@ With Smart Cache Cleaner,  you are able to clean your cache since :
 
 *   Maxime Defachelle
 *   Josue Kouka 
+*   Quentin Laplace   
 
 ## Versions
 -----------
