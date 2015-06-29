@@ -1,3 +1,18 @@
+
+/*
+Langue arabe 
+
+.checkboxs_cache, .checkboxs_time {
+  text-align: right;
+  white-space: nowrap;
+}
+
+checkbox-cache-time {
+	position: relative;
+    right: 30%;
+}
+*/
+
 html {
 	height: 200px;
 }
@@ -13,7 +28,7 @@ body {
 
 /********************************************************************************************** MAIN PAGE ***********************************************************************/ 
 
-#options, #help, #home {
+#home {
 	float: right;
 	text-align: center;
 }
@@ -23,13 +38,24 @@ body {
 	width: 100%;
 	height: 40px;
 }
-.txt_options, .txt_help {
-	font-size: 12px;
+.txt_options, #txt_help {
+	font-size: 14px;
 }
+#options {
+	position: absolute;
+	right: 20px;
+}
+
+#help {
+	position: absolute;
+	right: 80px
+}
+
 .icon-cog, .icon-help {
-	position: relative;
-	top: -16px;
+	position: relative; 
+	bottom: 20px;
 	left: 50%;
+	margin-left: 4px;
 }
 a:hover span + span  {
 	text-decoration: underline;
@@ -76,7 +102,7 @@ a:hover span + span  {
     color: #fff;
 }
 #span_days, #span_hours, #span_min, #span_sec {
-	top: 142px
+
 }
 #span_days {
     left: 32px;
@@ -119,8 +145,8 @@ a:hover span + span  {
 	width: 350px;
   	height: 20px;
   	white-space: nowrap;
-	margin: auto;
-	text-align: center;
+	margin-left: 28%;
+	text-align: left;
 }
 .submit_box, .title_box {
 	width: 350px;

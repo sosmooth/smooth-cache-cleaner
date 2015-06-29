@@ -29,6 +29,7 @@ $('document').ready(function(){
 		var path = '../_locales/'+id+'/translation.json'
 		$.getJSON(path, function(data){
 			if ( id == 'ara'){
+				// Option page
 				$('.checkbox label').each(function(){
 					var self = $(this);
 					var input = $(this).find('input');
@@ -46,8 +47,23 @@ $('document').ready(function(){
 
 				$('#formdata').css({"position":"relative","right":"5px","margin-left":"8px"});
 				$('#passwords').css({"position":"relative","right":"4px","margin-left":"8px"});
+
+
+				// Main page
+				$('#checkbox-cache-time label').each(function(){
+					var self = $(this);
+					var input = $(this).find('input');
+					var span = $(this).find('span');
+					var copy_span = span ;
+					span.remove()
+
+					input.before(copy_span);
+				});
+				
+
 			}
 			else {
+				// Options page
 				$('.checkbox label').each(function(){
 					var self = $(this);
 					var input = $(this).find('input');
@@ -57,15 +73,27 @@ $('document').ready(function(){
 						var cp = p ;
 						p.remove();
 						input.after(cp);
+
+						$('.checkbox').css({"text-align":""});
+						$('#checkbox_left').css({"margin-left": "12%"});
+						$('.checkbox_right').css({"margin-right":"0"});
+
+						$('#txt_formdata').css({"position":"relative","right":"4px"});
+						$('#txt_passwords').css({"position":"relative","right":"4px"});
 					}
+
 				})
 
-				$('.checkbox').css({"text-align":""});
-				$('#checkbox_left').css({"margin-left": "12%"});
-				$('.checkbox_right').css({"margin-right":"0"});
+				// Main page
+				$('form label input').each(function(){
+					var input = $(this);
+					var span = input[0].nextElementSibling;
+					var copy_span = span;
 
-				$('#txt_formdata').css({"position":"relative","right":"4px"});
-				$('#txt_passwords').css({"position":"relative","right":"4px"});
+					// if ( )
+				});
+
+				
 
 			}
 			$.each(data, function(key, val){
