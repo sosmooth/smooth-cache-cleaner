@@ -48,19 +48,17 @@ $('document').ready(function(){
 				$('#formdata').css({"position":"relative","right":"5px","margin-left":"8px"});
 				$('#passwords').css({"position":"relative","right":"4px","margin-left":"8px"});
 
-
 				// Main page
 				$('#checkbox-cache-time label').each(function(){
 					var self = $(this);
 					var input = $(this).find('input');
 					var span = $(this).find('span');
 					var copy_span = span ;
-					span.remove()
+					span.remove();
 
 					input.before(copy_span);
 				});
 				
-
 			}
 			else {
 				// Options page
@@ -85,15 +83,19 @@ $('document').ready(function(){
 				})
 
 				// Main page
-				$('form label input').each(function(){
-					var input = $(this);
-					var span = input[0].nextElementSibling;
-					var copy_span = span;
+				$('#checkbox-cache-time label').each(function(){
+					var self = $(this);
+					var input = $(this).find('input');
+					var span = $(this).find('span');
+					console.log(input);
+					if ( span.index() < input.index()){
+						var cspan = span ;
+						span.remove() ;
+						input.after(span) ;
 
-					// if ( )
-				});
-
-				
+					}
+					
+				})
 
 			}
 			$.each(data, function(key, val){
