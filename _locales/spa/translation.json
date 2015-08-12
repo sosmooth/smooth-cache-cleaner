@@ -1,5 +1,4 @@
 {
-    
     "txt_days": "dias",
     "txt_hours": "horas",
     "txt_min": "minutos",
@@ -14,5 +13,15 @@
     "txt_indexdb": "IndexedDB",
     "txt_formdata": "datos del formulo",
     "txt_filesystems": "systema de archivos",
-    "txt_localstorage": "almacen local"
+    "txt_localstorage": "almacen local",
+    "txt_plugindata": "datos de plugin",
+    "txt_download": "descragas",
+    "txt_history": "historia",
+    "txt_passwords": "contraseña", 
+    "span_days": "cuántos días ?",
+    "span_hours": "cuántos horas ?",
+    "span_min": "cuántos minutos ?",
+    "span_sec": "cuántos segundos ?",
+    "txt_save": "Guardar",
+    "txt_help": "Ayuda"
 }
